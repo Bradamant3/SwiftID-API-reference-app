@@ -1,0 +1,58 @@
+//- Copyright 2016 Capital One Services, LLC
+//- 
+//- Licensed under the Apache License, Version 2.0 (the "License");
+//- you may not use this file except in compliance with the License.
+//- You may obtain a copy of the License at
+//- 
+//-     http://www.apache.org/licenses/LICENSE-2.0
+//- 
+//- Unless required by applicable law or agreed to in writing, software
+//- distributed under the License is distributed on an "AS IS" BASIS,
+//- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//- See the License for the specific language governing permissions and limitations under the License.
+
+doctype html
+html
+  head
+    title PhotoShed
+    link(rel="stylesheet" href="/css/uikit.min.css")
+    link(rel="stylesheet" href="/css/site.css")
+    script(src="/js/jquery-2.2.0.min.js")
+    script(src="/js/uikit.min.js")
+    script(src="/js/core/modal.min.js")
+    script(src="/js/components/lightbox.min.js")
+    
+  body
+    nav.uk-navbar
+      a.uk-navbar-brand(href="/photos") PhotoShed
+      div.uk-navbar-flip
+        div.uk-navbar-content
+          if user
+            if user.accessToken
+              i.uk-icon-lock
+              | &nbsp; Protected by Capital One
+            else
+              a(href="/oauth" data-uk-tooltip title="Connect to Capital One to protect your photos!")
+                i.uk-icon-unlock
+                | &nbsp;Not Protected by Capital One
+        ul.uk-navbar-nav
+          if(user)
+            li
+              form#logoutForm.uk-hidden(action="/logout" method="POST")
+              a.uk-navbar-nav-subtitle(href="" onclick="logout(); return false;")
+                | Logout
+                div= user.username
+          else
+            li
+              a(href="/login") Login
+            li
+              a(href="/register") Register
+            
+    div.main-content.uk-container.uk-container-center
+      block content
+    
+    script.
+      function logout() {
+        document.getElementById('logoutForm').submit();
+      }
+    block scripts

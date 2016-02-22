@@ -1,0 +1,74 @@
+//- Copyright 2016 Capital One Services, LLC
+//- 
+//- Licensed under the Apache License, Version 2.0 (the "License");
+//- you may not use this file except in compliance with the License.
+//- You may obtain a copy of the License at
+//- 
+//-     http://www.apache.org/licenses/LICENSE-2.0
+//- 
+//- Unless required by applicable law or agreed to in writing, software
+//- distributed under the License is distributed on an "AS IS" BASIS,
+//- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//- See the License for the specific language governing permissions and limitations under the License.
+
+include ./_helpers
+
+//- Is the current user the owner of the photo
+- var isMine = photo.owner._id === user._id
+//- Is the current user able to protect the photo
+- var canProtect = !!(isMine && user.accessToken)
+
+//- Create a link to view the full resolution photo
+mixin fullResLink()
+  a.view-high-res(href="/photos/#{photo._id}/highRes" target="_blank") View Full Resolution
+
+//- Create an icon to display next to the full res link (if applicable)  
+mixin fullResIcon()
+  if photo.taskStatus
+    +status-icon(photo.taskStatus)
+    | &nbsp;
+  else if photo.isProtected
+    i.uk-icon-lock
+    | &nbsp;
+
+//- Create a link or message for potentially requesting access to the full res photo
+mixin fullResAccessLink()
+  if photo.taskStatus === 'OPEN'
+    span.task-status-message Waiting for Access Approval...
+  else if photo.taskStatus === 'REJECTED'
+    span.task-status-message Access Request Rejected
+  else
+    //- load a modal when clicked
+    a.request-access(href="/photos/#{photo._id}/requestAccess") Request Access To Full Resolution
+
+div.uk-modal-dialog.photo-details
+  img(src="/photos/#{photo._id}/lowRes")
+  div.uk-modal-caption
+    span.photo-name.uk-text-bold= photo.name
+    if !isMine
+      |  by 
+      span.photo-owner-name= photo.owner.username
+  div.uk-modal-footer.uk-grid
+    div.uk-width-1-2
+      //- Display a lock/unlock icon for photo protection, or an oauth link if not connected to oauth
+      if isMine
+        if canProtect
+          if(photo.isProtected)
+            a(href="", onclick="setProtected('#{photo._id}', false); return false;")
+              i.uk-icon-medium.uk-icon-lock
+          else
+            a(href="", onclick="setProtected('#{photo._id}', true); return false;")
+              i.uk-icon-medium.uk-icon-unlock-alt
+        else
+          a(href="/oauth")
+            i.uk-icon-unlock-alt
+            | &nbsp;Connect to Capital One to Protect
+    div.uk-width-1-2.uk-text-right
+      if isMine
+        +fullResLink()
+      else
+        +fullResIcon()
+        if canAccessHighRes
+          +fullResLink()
+        else
+          +fullResAccessLink()

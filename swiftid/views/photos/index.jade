@@ -1,0 +1,112 @@
+//- Copyright 2016 Capital One Services, LLC
+//- 
+//- Licensed under the Apache License, Version 2.0 (the "License");
+//- you may not use this file except in compliance with the License.
+//- You may obtain a copy of the License at
+//- 
+//-     http://www.apache.org/licenses/LICENSE-2.0
+//- 
+//- Unless required by applicable law or agreed to in writing, software
+//- distributed under the License is distributed on an "AS IS" BASIS,
+//- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//- See the License for the specific language governing permissions and limitations under the License.
+
+extends ../layout
+include ./_helpers
+
+//- Display a photo thumbnail
+mixin photo(photo)
+  - var isMine = photo.owner._id === user._id
+  div.photo-wrapper
+    div.photo
+      img(src="/photos/#{photo._id}/thumbnail" title="#{photo.name}" data-ps-photo="/photos/#{photo._id}")
+      if !isMine && photo.taskStatus
+        div.status-badge
+          +status-icon(photo.taskStatus).uk-icon-medium
+      else if photo.isProtected
+        div.status-badge
+          i.uk-icon-medium.uk-icon-lock
+    div.photo-caption.uk-text-center
+      div.photo-name= photo.name
+      if !isMine
+        div.photo-owner-name.uk-text-small= photo.owner.username
+  
+//- Display a collection of photos, with fallback text if none exist
+mixin photos(photos)
+  if photos && photos.length
+    div.photos
+      each photo in photos
+        +photo(photo)
+  else
+    div.photos.empty
+      | No Photos
+
+block content
+  h2 Photos
+
+  section
+    h3 #{user.username}'s Photos
+    +photos(ownedPhotos)
+  
+  section
+    h3 Other People's Photos
+    +photos(otherPhotos)
+    
+  section
+    ul.legend
+      li
+        i.uk-icon-medium.uk-icon-lock(title="protected")
+        |  Protected
+      li
+        i.task-open.uk-icon-medium.uk-icon-hourglass-half(title="pending")
+        |  Pending
+      li
+        i.task-approved.uk-icon-medium.uk-icon-unlock-alt(title="approved")
+        |  Approved
+      li
+        i.task-rejected.uk-icon-medium.uk-icon-lock(title="rejected")
+        |  Rejected
+    
+  //- Hidden form for photo protection (the action is overwritten in the setProtected function below)
+  form#protectForm.uk-hidden(action="/photos/#/isProtected" method="POST")
+    input(type='hidden', name='isProtected')
+  div#photoDetails.uk-modal
+  div#requestAccess.uk-modal
+
+block scripts
+  script.
+    $(function(){
+      var photoDetailsModal = UIkit.modal('#photoDetails');
+      var requestAccessModal = UIkit.modal('#requestAccess');
+      $('body').on('click', 'div.photo',  function(event) {
+        // Make an ajax call to load the photo.
+        var target = $(this).find('img');
+        $.get(target.data('ps-photo'), function(data){
+          $("#photoDetails").html(data);
+          photoDetailsModal.show();
+        });        
+      });
+      
+      $('body').on('click', '.request-access',  function(event) {
+        event.preventDefault();
+        // Make an ajax call to load the photo.
+        var target = $(event.target);
+        $.get(target.attr('href'), function(data){
+          $("#requestAccess").html(data);
+          photoDetailsModal.hide();
+          requestAccessModal.show();
+        });        
+      });
+      
+      $('body').on('click', '#requestAccess .close',  function(event) {
+        event.preventDefault();
+        requestAccessModal.hide();
+      });
+    });
+    
+    function setProtected(photoId, isProtected) {
+      var form = $('#protectForm');
+      form.attr('action', '/photos/' + photoId + '/isProtected');
+      form.find('input[name="isProtected"]').val(isProtected);
+      form.submit();
+    }

@@ -1,0 +1,10 @@
+//- Mixins use across multiple photo views
+
+//- Define the icons to use per task status
+mixin status-icon(taskStatus)
+  if taskStatus === 'OPEN'
+    i.task-open.uk-icon-hourglass-half&attributes(attributes)
+  else if taskStatus === 'APPROVED'
+    i.task-approved.uk-icon-unlock-alt&attributes(attributes)
+  else if taskStatus === 'REJECTED'
+    i.task-rejected.uk-icon-lock&attributes(attributes)

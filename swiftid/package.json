@@ -1,0 +1,32 @@
+{
+  "name": "swiftid",
+  "version": "0.0.0",
+  "private": true,
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "express-session": "^1.13.0",
+    "jade": "~1.11.0",
+    "lodash": "^4.3.0",
+    "moment": "^2.11.2",
+    "morgan": "~1.6.1",
+    "nedb": "^1.7.3",
+    "node-uuid": "^1.4.7",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "request": "^2.69.0",
+    "serve-favicon": "~2.3.0"
+  }
+}
