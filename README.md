@@ -29,45 +29,46 @@ From the project root:
 ### Log in as photo_owner
 The app comes with two pre-registered users, photo_owner and photo_requestor. Start by navigating to http://localhost:3000/. You will see a login form. Login with the following credentials
 
-Username: photo_owner
+Username: photo_owner  
 Password: password
 
 After logging in, you will be redirected to a page showing every photo the user owns and photos uploaded by other users.
 
-<insert photo_owner_dashboard.png>
+![photo_owner dashboard](/docs/photo_owner_dashboard.png)
 
 ### Protect a photo
 By default, any user can view the high resolution version of your uploaded photos. By authenticating with Capital One Financial SwiftID, we can restrict who has access to these photos. First, in the upper right corner, click "Not Protected by Capital One". This will start an OAuth flow asking for PhotoShed to connect to Capital One.
 
 Once you have authorized, click a photo thumbnail. In the lower left of the modal window, click the unlocked icon. It will change into a lock. The high resolution version of this photo is now protected.
 
-<insert photo_owner_unprotected.png>
-<insert photo_owner_protected.png>
+![photo_owner unprotected](/docs/photo_owner_unprotected.png)
+![photo_owner protected](/docs/photo_owner_protected.png)
 
 ### Log out and log in as photo_requestor
 Log out as photo_owner using the link in the upper right and log in again as photo_requestor using the following credentials
 
-Username: photo_requestor
+Username: photo_requestor  
 Password: password
 
-<insert photo_requestor_dashboard.png>
-
 ### Request access to the protected photo
-When you log in this time, you should see the photo's listed in "Other People's Photos". The photo that was protected by photo_owner should have a lock icon in the upper right corner. Click that photo and click "Request Access To Full Resolution". Then click "Request" in the next modal. This triggers a SwiftID request to photo_owner.
+When you log in this time, you should see the photo's listed in "Other People's Photos".
 
-<insert photo_requestor_request_access.png>
-<insert photo_requestor_request_modal.png>
+![photo_requestor dashboard](/docs/photo_requestor_dashboard.png)
 
+The photo that was protected by photo_owner should have a lock icon in the upper right corner. Click that photo and click "Request Access To Full Resolution". Then click "Request" in the next modal. This triggers a SwiftID request to photo_owner.
+
+![photo_requestor request access](/docs/photo_requestor_request_access.png)
+![photo_requestor request modal](/docs/photo_requestor_request_modal.png)
 
 ### Approve the request
 Switch over to the mock API dashboard http://localhost:3001/. This will list out all open SwiftID requests. Go ahead and approve the request.
 
-<insert mock_api_open_request.png>
+![mock API open request](/docs/mock_api_open_request.png)
 
 ### Access the photo as photo_requestor
 Switch back to http://localhost:3000/photos and refresh the page. You will see that lock icon has switched to unlocked. If you click the thumbnail, you will now see a "View Full Resolution" link. Click it to see the high resolution image.
 
-<insert photo_requestor_granted.png>
+![photo_requestor access granted](/docs/photo_requestor_granted.png)
 
 ### Viewing more details
 
