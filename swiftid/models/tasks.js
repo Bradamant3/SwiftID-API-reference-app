@@ -17,7 +17,7 @@ See the License for the specific language governing permissions and limitations 
  * Data access for tasks using NeDB.
  * A task is a request for SwiftID for access to a photo.
  */
-var db = require('../database').tasks;
+var db = require('../database').tasks
 
 /**
  * @callback findTaskCallback
@@ -33,7 +33,7 @@ var db = require('../database').tasks;
  * @param  {string}   photoId      The photo being requested access to.
  * @param  {Function} callback     See NeDB docs.
  */
-exports.create = function(taskResponse, requestorId, photoId, callback) {
+exports.create = function (taskResponse, requestorId, photoId, callback) {
   var task = {
     _id: taskResponse.taskReferenceId,
     responseStatus: taskResponse.status,
@@ -41,18 +41,18 @@ exports.create = function(taskResponse, requestorId, photoId, callback) {
     expirationTimestamp: taskResponse.taskExpirationTimestamp,
     requestorId: requestorId,
     photoId: photoId,
-    status: "OPEN"
-  };
-  db.insert(task, callback);
-};
+    status: 'OPEN'
+  }
+  db.insert(task, callback)
+}
 
 /**
  * Find a task by id.
  * @param {string}           id       The id of the task to find.
  * @param {findTaskCallback} callback Handle the response from NeDB
  */
-exports.findById = function(id, callback) {
-  db.findOne({ _id: id }, callback);
+exports.findById = function (id, callback) {
+  db.findOne({ _id: id }, callback)
 }
 
 /**
@@ -60,9 +60,9 @@ exports.findById = function(id, callback) {
  * @param {string}           requestorId The requestor of the task.
  * @param {findTaskCallback} callback    Handle the response from NeDB
  */
-exports.findByRequestorId = function(requestorId, callback) {
-  db.find({ requestorId: requestorId }, callback);
-};
+exports.findByRequestorId = function (requestorId, callback) {
+  db.find({ requestorId: requestorId }, callback)
+}
 
 /**
  * Load a task for a specific photo and requestor, if any
@@ -70,9 +70,9 @@ exports.findByRequestorId = function(requestorId, callback) {
  * @param {string}           requestorId The requestor of the task.
  * @param {findTaskCallback} callback    Handle the response from NeDB
  */
-exports.findForPhoto = function(photoId, requestorId, callback){
-  db.findOne({ requestorId: requestorId, photoId: photoId }, callback);
-};
+exports.findForPhoto = function (photoId, requestorId, callback) {
+  db.findOne({ requestorId: requestorId, photoId: photoId }, callback)
+}
 
 /**
  * Update a task
@@ -80,6 +80,6 @@ exports.findForPhoto = function(photoId, requestorId, callback){
  * @param  {object}   newValues A set of modifiers to use with $set
  * @param  {Function} callback  See NeDB docs
  */
-exports.updateValues = function(id, newValues, callback){
-  db.update({ _id: id }, { $set: newValues }, callback);
-};
+exports.updateValues = function (id, newValues, callback) {
+  db.update({ _id: id }, { $set: newValues }, callback)
+}

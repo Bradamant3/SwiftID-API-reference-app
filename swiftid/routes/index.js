@@ -15,24 +15,24 @@ See the License for the specific language governing permissions and limitations 
 
 /* Register all routes. */
 
-var express = require('express');
-var isAuthenticated = require('../middlewares/authentication');
+var express = require('express')
+var isAuthenticated = require('../middlewares/authentication')
 
-var users = require('./users');
-var callbacks = require('./callbacks');
-var photos = require('./photos');
-var oauth = require('./oauth');
+var users = require('./users')
+var callbacks = require('./callbacks')
+var photos = require('./photos')
+var oauth = require('./oauth')
 
-module.exports = function(options){
-  var router = express.Router();
+module.exports = function (options) {
+  var router = express.Router()
 
-  router.use('/', users);
-  router.use('/', callbacks(options.swiftid.oauth.clientID));
-  router.use('/photos', photos(options.swiftid));
-  router.use('/oauth', oauth(options.swiftid.oauth));
-  router.get('/', isAuthenticated, function(req, res, next){
-    res.redirect('/photos');
-  });
+  router.use('/', users)
+  router.use('/', callbacks(options.swiftid.oauth.clientID))
+  router.use('/photos', photos(options.swiftid))
+  router.use('/oauth', oauth(options.swiftid.oauth))
+  router.get('/', isAuthenticated, function (req, res, next) {
+    res.redirect('/photos')
+  })
 
-  return router;
-};
+  return router
+}

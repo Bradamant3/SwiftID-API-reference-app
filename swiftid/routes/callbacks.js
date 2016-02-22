@@ -15,41 +15,40 @@ See the License for the specific language governing permissions and limitations 
 
 /* Exposes callbacks that can be called by webhooks. */
 
-var express = require('express');
-var tasks = require('../models/tasks');
-var photos = require('../models/photos');
-var debug = require('debug')('swiftid:callbacks');
+var express = require('express')
+var tasks = require('../models/tasks')
+var photos = require('../models/photos')
 
-module.exports = function(clientId) {
-  var router = express.Router();
+module.exports = function (clientId) {
+  var router = express.Router()
 
   /**
    * Called by SwiftID when a request is approved or rejected.
    */
-  router.post('/photos/request-access-hook', function(req, res, next) {
-    var taskStatus = req.body.taskStatus;
-    var taskReferenceId = req.body.taskReferenceId;
+  router.post('/photos/request-access-hook', function (req, res, next) {
+    var taskStatus = req.body.taskStatus
+    var taskReferenceId = req.body.taskReferenceId
 
     // Find the SwiftID task that was completed.
-    tasks.findById(taskReferenceId, function(taskErr, task) {
+    tasks.findById(taskReferenceId, function (taskErr, task) {
       // Find the photo for that task.
-      photos.findById(task.photoId, function(photoErr, photo) {
+      photos.findById(task.photoId, function (photoErr, photo) {
         // Update the status on the task.
-        tasks.updateValues(taskReferenceId, { status: taskStatus }, function(updateErr) {
+        tasks.updateValues(taskReferenceId, { status: taskStatus }, function (updateErr) {
           // If accepted, add the user to sharedWith on the photo.
-          if(taskStatus === 'APPROVED') {
-            photos.addSharedUserId(photo._id, task.requestorId, function(addSharedErr) {});
+          if (taskStatus === 'APPROVED') {
+            photos.addSharedUserId(photo._id, task.requestorId, function (addSharedErr) {})
           }
-        });
-      });
-    });
+        })
+      })
+    })
 
     // SwiftID expects to see this header with a 2xx response when calling
     // the webhook. We send this response regardless of what happens when
     // processing the approval/rejection, so we don't wait for results.
     res.set('X-C1-Verification', clientId)
-    res.send();
-  });
+    res.send()
+  })
 
-  return router;
-};
+  return router
+}

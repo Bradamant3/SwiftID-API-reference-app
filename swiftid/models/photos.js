@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and limitations 
 */
 
 /* Data access for photos using NeDB. */
-var db = require('../database').photos;
+var db = require('../database').photos
 
 /**
  * @callback findPhotoCallback
@@ -27,27 +27,27 @@ var db = require('../database').photos;
  * @param {string}            id       The id of the photo to find.
  * @param {findPhotoCallback} callback Handle the response from NeDB
  */
-exports.findById = function(id, callback) {
-  db.findOne({ _id: id }, callback);
-};
+exports.findById = function (id, callback) {
+  db.findOne({ _id: id }, callback)
+}
 
 /**
  * Find all photos for an owner.
  * @param  {string}            ownerId  The userId of the photo owner.
  * @param  {findPhotoCallback} callback Handle the response from NeDB
  */
-exports.findByOwnerId = function(ownerId, callback) {
-  db.find({ 'owner._id': ownerId }, callback);
-};
+exports.findByOwnerId = function (ownerId, callback) {
+  db.find({ 'owner._id': ownerId }, callback)
+}
 
 /**
  * Find all photos owned by other users.
  * @param  {string}            userId   Find all photos owned by users other than userId.
  * @param  {findPhotoCallback} callback Handle the response from NeDB
  */
-exports.findOtherPhotos = function(userId, callback) {
-  db.find({ 'owner._id': { $ne: userId } }, callback);
-};
+exports.findOtherPhotos = function (userId, callback) {
+  db.find({ 'owner._id': { $ne: userId } }, callback)
+}
 
 /**
  * Update a photo
@@ -55,9 +55,9 @@ exports.findOtherPhotos = function(userId, callback) {
  * @param  {object}   newValues A set of modifiers to use with $set
  * @param  {Function} callback  See NeDB docs
  */
-exports.updateValues = function(id, newValues, callback) {
-  db.update({ _id: id }, { $set: newValues }, callback);
-};
+exports.updateValues = function (id, newValues, callback) {
+  db.update({ _id: id }, { $set: newValues }, callback)
+}
 
 /**
  * Add a user to the list of users the photo has been shared with.
@@ -65,6 +65,6 @@ exports.updateValues = function(id, newValues, callback) {
  * @param  {string}   userId   The user to add to the photo.
  * @param  {Function} callback See NeDB docs
  */
-exports.addSharedUserId = function(id, userId, callback) {
-  db.update({ _id: id }, { $addToSet: { sharedWith: userId }}, callback);
+exports.addSharedUserId = function (id, userId, callback) {
+  db.update({ _id: id }, { $addToSet: { sharedWith: userId } }, callback)
 }

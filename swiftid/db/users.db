@@ -1,2 +1,2 @@
 {"username":"photo_requestor","password":"password","_id":"nJoCNvUqDHPwWZPK"}
-{"username":"photo_owner","password":"password","_id":"sn7kIxyPP41rLzwc"}
+{"username":"photo_owner","password":"password","_id":"sn7kIxyPP41rLzwc","accessToken":{"access_token":"5354e3a56036056cffb5a99f368a31cef3aee2a8","token_type":"Bearer","expires_in":"900","refresh_token":"cV6tIa3UQncpzGgXfufRwZJvVbwZeoQPpsx7YzxdYNY","id_token":"eyJraWQiOiIxNDM4NzA2MDM4NTc4IiwiYWxnIjoiUlMyNTYifQ","received":1456157896}}

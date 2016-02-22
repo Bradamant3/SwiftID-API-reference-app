@@ -13,8 +13,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 */
 
-var Datastore = require('nedb');
+var Datastore = require('nedb')
+var path = require('path')
 
-exports.users = new Datastore({ filename: __dirname + "/db/users.db", autoload: true });
-exports.photos = new Datastore({ filename: __dirname + "/db/photos.db", autoload: true });
-exports.tasks = new Datastore({ filename: __dirname + "/db/tasks.db", autoload: true });
+exports.users = new Datastore({ filename: path.join(__dirname, '/db/users.db'), autoload: true })
+exports.photos = new Datastore({ filename: path.join(__dirname, '/db/photos.db'), autoload: true })
+exports.tasks = new Datastore({ filename: path.join(__dirname, '/db/tasks.db'), autoload: true })

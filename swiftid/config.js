@@ -13,9 +13,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 */
 
-var oauthHost = 'http://localhost:3001';
-var swiftidHost = 'http://localhost:3001';
-var appHost = 'http://localhost:3000';
+var oauthHost = 'http://localhost:3001'
+var swiftidHost = 'http://localhost:3001'
+var appHost = 'http://localhost:3000'
 
 module.exports = {
   swiftid: {
@@ -36,4 +36,4 @@ module.exports = {
       expirationThreshold: 2
     }
   }
-};
+}

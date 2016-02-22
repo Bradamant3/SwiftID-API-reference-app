@@ -13,38 +13,34 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 */
 
-var express = require('express');
-var passport = require('passport');
-var request = require('request');
-var qs = require('querystring');
-var debug = require('debug')('swiftid:oauth');
-var users = require('../models/users');
+var express = require('express')
+var debug = require('debug')('swiftid:oauth')
 
-var isAuthenticated = require('../middlewares/authentication');
+var isAuthenticated = require('../middlewares/authentication')
 
-module.exports = function(options){
-  var router = express.Router();
-  var oauth = require('../oauth')(options);
+module.exports = function (options) {
+  var router = express.Router()
+  var oauth = require('../oauth')(options)
 
   /**
    * Begin the oauth process by redirecting the user to COF
    */
-  router.get('/', isAuthenticated, function(req, res, next){
+  router.get('/', isAuthenticated, function (req, res, next) {
     // TODO: check whether the user actually needs oauth
-    res.redirect(301, oauth.getRedirectUrl());
-  });
+    res.redirect(301, oauth.getRedirectUrl())
+  })
 
   /**
    * Expose a callback for COF to redirect back with an authorization code
    */
-  router.get('/callback', isAuthenticated, function(req, res, next){
-    var code = req.query['authorizationCode'];
-    debug('Received authorization code: ' + code);
-    oauth.getAccessToken(code, req.user._id, function(err){
-      if(err) { return next(err)};
-      res.redirect('/');
-    });
-  });
+  router.get('/callback', isAuthenticated, function (req, res, next) {
+    var code = req.query['authorizationCode']
+    debug('Received authorization code: ' + code)
+    oauth.getAccessToken(code, req.user._id, function (err) {
+      if (err) { return next(err) }
+      res.redirect('/')
+    })
+  })
 
-  return router;
+  return router
 }

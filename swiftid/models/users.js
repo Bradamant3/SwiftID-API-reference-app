@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and limitations 
 */
 
 /* Data access for users using NeDB. */
-var db = require('../database').users;
+var db = require('../database').users
 
 /**
  * Create a new user
@@ -22,9 +22,9 @@ var db = require('../database').users;
  * @param  {string}   password
  * @param  {Function} callback See NeDB docs.
  */
-exports.create = function(username, password, callback) {
-  var user = { username: username, password: password };
-  db.insert(user, callback);
+exports.create = function (username, password, callback) {
+  var user = { username: username, password: password }
+  db.insert(user, callback)
 }
 
 /**
@@ -33,8 +33,8 @@ exports.create = function(username, password, callback) {
  * @param  {Function} callback See NeDB docs.
  */
 
-exports.findById = function(userId, callback) {
-  db.findOne({ _id: userId }, callback);
+exports.findById = function (userId, callback) {
+  db.findOne({ _id: userId }, callback)
 }
 
 /**
@@ -42,8 +42,8 @@ exports.findById = function(userId, callback) {
  * @param  {string}   username The username of the user to find.
  * @param  {Function} callback See NeDB docs.
  */
-exports.findByUsername = function(username, callback) {
-  db.findOne({ username: username }, callback);
+exports.findByUsername = function (username, callback) {
+  db.findOne({ username: username }, callback)
 }
 
 /**
@@ -52,9 +52,9 @@ exports.findByUsername = function(username, callback) {
  * @param  {string}   accessToken The new access tokenURL
  * @param  {Function} callback    See NeDB docs.
  */
-exports.updateAccessToken = function(userId, accessToken, callback) {
-  db.update({ _id: userId}, {$set: { accessToken: accessToken }}, {}, function(err, updateCount) {
-    if(err) { return callback(err); }
-    callback(null, accessToken);
-  });
+exports.updateAccessToken = function (userId, accessToken, callback) {
+  db.update({ _id: userId }, { $set: { accessToken: accessToken } }, {}, function (err, updateCount) {
+    if (err) { return callback(err) }
+    callback(null, accessToken)
+  })
 }

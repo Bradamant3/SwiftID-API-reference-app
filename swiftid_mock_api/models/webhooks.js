@@ -13,23 +13,22 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 */
 
+var db = require('../database').webhooks
 
-var db = require('../database').webhooks;
-
-exports.create = function(webhook, callback) {
-  db.insert(webhook, function(err, newWebhook) {
-    callback(err, newWebhook);
-  });
+exports.create = function (webhook, callback) {
+  db.insert(webhook, function (err, newWebhook) {
+    callback(err, newWebhook)
+  })
 }
 
-exports.findAll = function(callback) {
-  db.find({}, function(err, webhooks) {
-    callback(err, webhooks);
-  });
+exports.findAll = function (callback) {
+  db.find({}, function (err, webhooks) {
+    callback(err, webhooks)
+  })
 }
 
-exports.findFirst = function(callback) {
-  db.findOne({}, function(err, webhook) {
-    callback(err, webhook);
-  });
+exports.findFirst = function (callback) {
+  db.findOne({}, function (err, webhook) {
+    callback(err, webhook)
+  })
 }

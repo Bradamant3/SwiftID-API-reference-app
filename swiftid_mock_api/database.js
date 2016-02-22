@@ -13,8 +13,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 */
 
+var Datastore = require('nedb')
+var path = require('path')
 
-var Datastore = require('nedb');
-
-exports.webhooks = new Datastore({ filename: __dirname + "/db/webhooks.db", autoload: true });
-exports.tasks = new Datastore({ filename: __dirname + "/db/tasks.db", autoload: true });
+exports.webhooks = new Datastore({ filename: path.join(__dirname, '/db/webhooks.db'), autoload: true })
+exports.tasks = new Datastore({ filename: path.join(__dirname, '/db/tasks.db'), autoload: true })

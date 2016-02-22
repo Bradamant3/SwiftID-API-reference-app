@@ -13,35 +13,34 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 */
 
+var db = require('../database').tasks
 
-var db = require('../database').tasks;
-
-exports.create = function(task, callback) {
-  db.insert(task, function(err, newTask) {
-    callback(err, newTask);
-  });
+exports.create = function (task, callback) {
+  db.insert(task, function (err, newTask) {
+    callback(err, newTask)
+  })
 }
 
-exports.findAll = function(callback) {
-  db.find({}, function(err, tasks) {
-    callback(err, tasks);
-  });
+exports.findAll = function (callback) {
+  db.find({}, function (err, tasks) {
+    callback(err, tasks)
+  })
 }
 
-exports.findOpen = function(callback) {
-  db.find({ status: "OPEN" }, function(err, tasks) {
-    callback(err, tasks);
-  });
+exports.findOpen = function (callback) {
+  db.find({ status: 'OPEN' }, function (err, tasks) {
+    callback(err, tasks)
+  })
 }
 
-exports.findById = function(id, callback) {
-  db.findOne({ _id: id }, function(err, task) {
-    callback(err, task);
-  });
+exports.findById = function (id, callback) {
+  db.findOne({ _id: id }, function (err, task) {
+    callback(err, task)
+  })
 }
 
-exports.updateStatus = function(id, status, callback) {
-  db.update({ _id: id }, { $set: { status: status }}, {}, function(err, numReplaced){
-    callback(err, numReplaced);
+exports.updateStatus = function (id, status, callback) {
+  db.update({ _id: id }, { $set: { status: status } }, {}, function (err, numReplaced) {
+    callback(err, numReplaced)
   })
 }
