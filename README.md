@@ -1,10 +1,13 @@
 # SwiftID API Reference App
 
-Summary of SwiftID goes here.
+SwiftID is an Identity service that provides secure authentication with Capital One SwiftID Customer’s mobile device.  SwiftID Customers can approve or deny a transaction request by a third party, independent of the SwiftID customer’s Capital One accounts or any other Capital One service.
 
-This reference app highlights how to use SwiftID with an app called PhotoShed. Users can protect their photos so that only those they approve through SwiftID have access to the high resolution versions.
+## Software Requirements Including version
+This is version 1.0 of the SwiftID API Reference Application Code. For software requirements, see Build/Install Instructions below.
 
-## Getting Started
+This reference app highlights how to use SwiftID with an app called PhotoShed. Users can protect their photos so that only those they approve through SwiftID have access to the high resolution versions. If you encounter any issues using this reference code, please submit them in the form of GitHub issues.
+
+## Build/Install Instructions
 
 ### config.js
 You can configure your clientID and clientSecret in swiftid/config.js. In addition, if you change the default port for the mock API, you also need to update this file.
@@ -73,3 +76,12 @@ Switch back to http://localhost:3000/photos and refresh the page. You will see t
 ### Viewing more details
 
 To get a deeper look at the messages being passed, start the app with the following command `DEBUG=swiftid:* NODE_DEBUG=request npm start`.  This will activate detailed debug logging to the console, showing the details of the request to the API and the response received.
+
+## Architecture
+
+## Roadmap
+This reference app code is intended as a starting place for developers who want to use the SwiftID API. As such, it will be updated with new functionality only when the SwiftID API is updated with new functionality.
+
+## Contribution Guidelines
+We encourage any contributions that align with the intent of this project and add more functionality or languages that other developers can make use of. To contribute to the project, please submit a PR for our review. Before contributing any source code, familiarize yourself with the Apache License 2.0 (license.md), which controls the licensing for this project.
+
