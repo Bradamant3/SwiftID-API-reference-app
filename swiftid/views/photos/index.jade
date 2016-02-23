@@ -110,3 +110,8 @@ block scripts
       form.find('input[name="isProtected"]').val(isProtected);
       form.submit();
     }
+        
+    (function(){
+      var host = window.document.location.host.replace(/:.*/, '');
+      var ws = new WebSocket('ws://' + host + ':3000');
+    }())
