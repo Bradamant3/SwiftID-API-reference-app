@@ -1,5 +1,3 @@
-# SwiftID API Reference App
-
 SwiftID is an Identity service that provides secure authentication with Capital One SwiftID Customer’s mobile device.  SwiftID Customers can approve or deny a transaction request by a third party, independent of the SwiftID customer’s Capital One accounts or any other Capital One service.
 
 ## Software Requirements Including version
@@ -8,6 +6,12 @@ This is version 1.0 of the SwiftID API Reference Application Code. For software 
 This reference app highlights how to use SwiftID with an app called PhotoShed. Users can protect their photos so that only those they approve through SwiftID have access to the high resolution versions. If you encounter any issues using this reference code, please submit them in the form of GitHub issues.
 
 ## Build/Install Instructions
+* [Node.js](https://nodejs.org) 4.X or higher
+
+All other dependencies are loaded with [npm](https://www.npmjs.com/). All dependencies are cross-platform. Notable dependencies are listed below.
+* [NeDB](https://github.com/louischatriot/nedb) - Embedded persistent or in memory database for Node.js with no binary dependency.
+* [express](http://expressjs.com/) - Minimalist web framework for Node.js
+* [passport](http://passportjs.org/) - Simple, unobtrusive authentication for Node.js
 
 ### config.js
 You can configure your clientID and clientSecret in swiftid/config.js. In addition, if you change the default port for the mock API, you also need to update this file.
