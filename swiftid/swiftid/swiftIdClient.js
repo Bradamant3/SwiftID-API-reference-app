@@ -88,8 +88,9 @@ SwiftIdClient.prototype._sendRequest = function _sendRequest (reqOptions, callba
       debug('Received response', body)
       return callback(null, body)
     } else {
-      console.error('Received unexpected status code: ' + response.statusCode)
-      return callback(new Error(''))
+      var errorMessage = 'Received unexpected status code: ' + response.statusCode
+      console.error(errorMessage)
+      return callback(new Error(errorMessage))
     }
   })
 }
