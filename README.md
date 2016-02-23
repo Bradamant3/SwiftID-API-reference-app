@@ -81,7 +81,7 @@ To get a deeper look at the messages being passed, start the app with the follow
 ## Architecture
 PhotoShed is a [Node.js](https://nodejs.org) 4.x and higher app built with [Express](http://expressjs.com/) 4.13.1. It uses [NeDB](https://github.com/louischatriot/nedb) 1.7.3 for the persistence layer and [Passport](http://passportjs.org/) for authentication.
 
-One overarching goal was to allow the app to run on any machine that has Node.js installed with no other depencies outside of npm. This led us to use NeDB for the persistence layer. NeDB is ideal because it has no binary dependency. Also, it stores data in human readable format, which is useful for a reference application.
+One overarching goal was to allow the app to run on any machine that has Node.js installed with no other dependencies outside of npm. This led us to use NeDB for the persistence layer. NeDB is ideal because it has no binary dependency. Also, it stores data in human readable format, which is useful for a reference application.
 
 NeDB does not support [promises](https://www.promisejs.org/), so there are portions of the code that have deeply nested callbacks. Since the application is small, this was considered an acceptable tradeoff versus bringing in a library to wrap NeDB calls in promises.
 
