@@ -21,7 +21,6 @@ app.set('port', port)
  */
 
 var server = http.createServer(app)
-var wss = new WebSocketServer({ server: server })
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -34,8 +33,28 @@ server.on('listening', onListening)
 /**
  * Set up web sockets
  */
+
+var wss = new WebSocketServer({ server: server })
+var notifier = require('../notifier')
 wss.on('connection', function onConnection (ws) {
   debug('New WebSocket connection')
+
+  // Notify the client on changes to photo access
+  // NOTE: This implementation broadcasts this information to all connected clients.
+  // A more robust solution would associate each web socket with its authenticated client,
+  // and only broadcast relevant events
+  var onTaskStatusChanged = function (taskInfo) {
+    debug('Notifying client of status change', taskInfo)
+    ws.send(JSON.stringify(taskInfo))
+  }
+
+  notifier.on('task-status-changed', onTaskStatusChanged)
+
+  // Remove the event listener if the client disconnects
+  ws.on('close', function onClose () {
+    debug('Disconnecting WebSocket connection')
+    notifier.removeListener('task-status-changed', onTaskStatusChanged)
+  })
 })
 
 /**
