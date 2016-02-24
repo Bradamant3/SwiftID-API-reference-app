@@ -27,9 +27,9 @@ The app must have an endpoint registered with SwiftID to use as a webhook callba
 POST your client credentials to the OAuth endpoint:
 ```
 curl -X POST http://localhost:3001/oauth/oauth20/token\
-     -d client_id=<client_id> \
-     -d client_secret=<client_secret> \
-     -d grant_type=client_credentials\
+     -d 'client_id=<client_id>' \
+     -d 'client_secret=<client_secret>' \
+     -d 'grant_type=client_credentials'
 ```
 The response will contain an access token:
 ```
