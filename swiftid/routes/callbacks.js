@@ -30,7 +30,7 @@ module.exports = function (clientId) {
 
     // If the webhookValidationId is "true", then this is just a ping after
     // registering a webhook. There is nothing to do in that case.
-    if(webhookValidationId !== "true") {
+    if(webhookValidationId !== 'true') {
       var taskStatus = req.body.taskStatus
       var taskReferenceId = req.body.taskReferenceId
 
