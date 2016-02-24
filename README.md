@@ -20,9 +20,36 @@ From the project root:
 `npm start`
 
 ### Register a webhook with the mock API
-By default, the mock API runs on port 3001. This curl command will register a webhook that will be called when a SwiftID request is approved or rejected. This command only needs to be run the first time you run the app.
+The app must have an endpoint registered with SwiftID to use as a webhook callback when a SwiftID request is approved or rejected. These curl commands will authenticate and register the webhook.
 
-`curl -H "Content-Type: application/json" -X POST -d '{ "clientId": "123456", "clientSecret": "abcdef", "callbackUrl": "http://localhost:3000/photos/request-access-hook", "eventType": "ENHANCEDAUTHENTICATION" }' http://localhost:3001/identity/webhooks`
+**These commands only need to be run the first time you run the app**
+
+POST your client credentials to the OAuth endpoint:
+```
+curl -X POST http://localhost:3001/oauth/oauth20/token\
+     -d 'client_id=<client_id>' \
+     -d 'client_secret=<client_secret>' \
+     -d 'grant_type=client_credentials'
+```
+The response will contain an access token:
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+    {
+        "access_token" : "5354e3a56036056cffb5a99f368a31cef3aee2a8",
+        "token_type" : "Bearer",
+        "expires_in" : 1295999
+    }
+```
+
+Register the webhook, passing in the access_token:
+```
+curl -X POST http://localhost:3001/identity/webhooks\
+   -H "Content-Type: application/json"\
+   -H "Authorization: Bearer <access_token>"\
+   -d '{ "callbackUrl": "http://localhost:3000/photos/request-access-hook",
+   "eventType": "ENHANCEDAUTHENTICATION" }'
+```
 
 ### Start PhotoShed
 From the project root:  

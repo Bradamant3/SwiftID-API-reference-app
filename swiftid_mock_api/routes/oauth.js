@@ -15,7 +15,6 @@ See the License for the specific language governing permissions and limitations 
 
 var express = require('express')
 var router = express.Router()
-var request = require('request')
 var url = require('url')
 
 router.get('/auz/authorize', function (req, res, next) {
@@ -34,20 +33,36 @@ router.post('/auz/authorize', function (req, res, next) {
   res.redirect(301, redirectURI)
 })
 
+/**
+ * Get a new token
+ * Supports multiple grant_type options
+ */
 router.post('/oauth20/token', function (req, res, next) {
   var authorizationCode = req.body.code
   var clientId = req.body.client_id
   var clientSecret = req.body.client_secret
-  var redirectURI = url.parse(req.body.redirect_uri)
+  var redirectURI = req.body.redirect_uri && url.parse(req.body.redirect_uri)
   var grantType = req.body.grant_type
 
-  var responseBody = {
-    access_token: '5354e3a56036056cffb5a99f368a31cef3aee2a8',
-    token_type: 'Bearer',
-    expires_in: '900',
-    refresh_token: 'cV6tIa3UQncpzGgXfufRwZJvVbwZeoQPpsx7YzxdYNY',
-    id_token: 'eyJraWQiOiIxNDM4NzA2MDM4NTc4IiwiYWxnIjoiUlMyNTYifQ'
+  var responseBody
+  if (grantType === 'client_credentials') {
+    responseBody = {
+      access_token: '5354e3a56036056cffb5a99f368a31cef3aee2a8',
+      token_type: 'Bearer',
+      expires_in: '900',
+      refresh_token: 'cV6tIa3UQncpzGgXfufRwZJvVbwZeoQPpsx7YzxdYNY',
+      id_token: 'eyJraWQiOiIxNDM4NzA2MDM4NTc4IiwiYWxnIjoiUlMyNTYifQ'
+    }
+  } else if (grantType === 'authorization_code' || grantType === 'refresh_token') {
+    responseBody = {
+      access_token: '5354e3a56036056cffb5a99f368a31cef3aee2a8',
+      token_type: 'Bearer',
+      expires_in: '900'
+    }
+  } else {
+    res.code(400)
   }
+
   res.json(responseBody)
 })
 
