@@ -7,7 +7,7 @@ This reference app highlights how to use SwiftID with an app called PhotoShed. U
 ## Getting Started
 
 ### config.js
-You can configure your clientID and clientSecret in swiftid/config.js. In addition, if you change the default port for the mock API, you also need to update this file.
+config.js contains information specific to your app, such as your client_id and client_secret. Create this file by copying [config.js.sample](/swiftid/config.js.sample). Be careful not to put config.js into version control.
 
 ### Start the mock API
 From the project root:  
