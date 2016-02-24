@@ -60,7 +60,7 @@ router.post('/oauth20/token', function (req, res, next) {
       id_token: 'eyJraWQiOiIxNDM4NzA2MDM4NTc4IiwiYWxnIjoiUlMyNTYifQ'
     }
   } else {
-    res.code(400)
+    res.status(400)
   }
 
   res.json(responseBody)
