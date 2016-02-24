@@ -11,7 +11,7 @@ The only dependency that must be manually installed is [Node.js](https://nodejs.
 You can learn how to install Node.js on your platform at https://nodejs.org/en/download/.
 
 ### config.js
-You can configure your clientID and clientSecret in swiftid/config.js. In addition, if you change the default port for the mock API, you also need to update this file.
+config.js contains information specific to your app, such as your client_id and client_secret. Create this file by copying [config.js.sample](/swiftid/config.js.sample). Be careful not to put config.js into version control.
 
 ### Start the mock API
 From the project root:  
