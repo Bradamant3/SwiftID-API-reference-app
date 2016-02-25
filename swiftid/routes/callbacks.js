@@ -19,6 +19,7 @@ var express = require('express')
 var tasks = require('../models/tasks')
 var photos = require('../models/photos')
 var webhookConfirmation = require('../models/webhookConfirmation')
+var notifier = require('../notifier')
 var debug = require('debug')('swiftid:callbacks')
 
 module.exports = function (clientId) {
@@ -33,7 +34,7 @@ module.exports = function (clientId) {
 
     // If the webhookValidationId is "true", then this is just a ping after
     // registering a webhook. There is nothing to do in that case.
-    if(webhookValidationId !== 'true') {
+    if (webhookValidationId !== 'true') {
       debug('Handling photo access hook callback')
       var taskStatus = req.body.taskStatus
       var taskReferenceId = req.body.taskReferenceId
@@ -48,6 +49,12 @@ module.exports = function (clientId) {
             if (taskStatus === 'APPROVED') {
               photos.addSharedUserId(photo._id, task.requestorId, function (addSharedErr) {})
             }
+            // Notify any listeners that the task has been changed
+            notifier.emit('task-status-changed', {
+              photoId: photo._id,
+              requestorId: task.requestorId,
+              status: taskStatus
+            })
           })
         })
       })

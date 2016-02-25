@@ -1,5 +1,20 @@
 #!/usr/bin/env node
 
+/*
+Copyright 2016 Capital One Services, LLC
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and limitations under the License.
+*/
+
 /**
  * Module dependencies.
  */
@@ -7,6 +22,7 @@
 var app = require('../app')
 var debug = require('debug')('swiftid:server')
 var http = require('http')
+var WebSocketServer = require('ws').Server
 
 /**
  * Get port from environment and store in Express.
@@ -28,6 +44,33 @@ var server = http.createServer(app)
 server.listen(port)
 server.on('error', onError)
 server.on('listening', onListening)
+
+/**
+ * Set up web sockets
+ */
+
+var wss = new WebSocketServer({ server: server })
+var notifier = require('../notifier')
+wss.on('connection', function onConnection (ws) {
+  debug('New WebSocket connection')
+
+  // Notify the client on changes to photo access
+  // NOTE: This implementation broadcasts this information to all connected clients.
+  // A more robust solution would associate each web socket with its authenticated client,
+  // and only broadcast relevant events
+  var onTaskStatusChanged = function (taskInfo) {
+    debug('Notifying client of status change', taskInfo)
+    ws.send(JSON.stringify(taskInfo))
+  }
+
+  notifier.on('task-status-changed', onTaskStatusChanged)
+
+  // Remove the event listener if the client disconnects
+  ws.on('close', function onClose () {
+    debug('Disconnecting WebSocket connection')
+    notifier.removeListener('task-status-changed', onTaskStatusChanged)
+  })
+})
 
 /**
  * Normalize a port into a number, string, or false.
