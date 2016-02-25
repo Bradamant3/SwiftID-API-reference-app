@@ -20,6 +20,7 @@ var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser')
 var session = require('express-session')
 var flash = require('connect-flash')
+var helmet = require('helmet')
 var passport = require('passport')
 var LocalStrategy = require('passport-local').Strategy
 
@@ -38,6 +39,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(flash())
+app.use(helmet())
 
 // Setup Passport for authentication
 passport.use(new LocalStrategy(
