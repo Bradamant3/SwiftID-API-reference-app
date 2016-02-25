@@ -19,6 +19,7 @@ block content
   include ./_includes/error-alert.jade
       
   form.uk-form.uk-form-horizontal(action="/register", method="POST")
+    input(type="hidden" name="_csrf" value="#{csrfToken}")
     div.uk-form-row
       label.uk-form-label(for="username") Username
       div.uk-form-controls

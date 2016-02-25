@@ -16,15 +16,21 @@ See the License for the specific language governing permissions and limitations 
 var express = require('express')
 var router = express.Router()
 var passport = require('passport')
+var csrf = require('csurf')
 var users = require('../models/users')
 
+var csrfProtection = csrf({ cookie: true })
+
 /* GET registration page */
-router.get('/register', function (req, res, next) {
-  res.render('register', { error: req.flash('error') })
+router.get('/register', csrfProtection, function (req, res, next) {
+  res.render('register', {
+    csrfToken: req.csrfToken(),
+    error: req.flash('error')
+  })
 })
 
 /* POST registration page */
-router.post('/register', function (req, res, next) {
+router.post('/register', csrfProtection, function (req, res, next) {
   // Get username and password params.
   var username = req.body.username
   var password = req.body.password
@@ -52,11 +58,15 @@ router.post('/register', function (req, res, next) {
   })
 })
 
-router.get('/login', function (req, res, next) {
-  res.render('login', { error: req.flash('error') })
+router.get('/login', csrfProtection, function (req, res, next) {
+  res.render('login', {
+    csrfToken: req.csrfToken(),
+    error: req.flash('error')
+  })
 })
 
 router.post('/login',
+  csrfProtection,
   passport.authenticate('local', { successRedirect: '/photos',
     failureRedirect: '/login',
   failureFlash: true })
