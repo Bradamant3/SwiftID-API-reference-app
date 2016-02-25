@@ -69,7 +69,8 @@ block content
     
   //- Hidden form for photo protection (the action is overwritten in the setProtected function below)
   form#protectForm.uk-hidden(action="/photos/#/isProtected" method="POST")
-    input(type='hidden', name='isProtected')
+    input(type="hidden" name="_csrf" value="#{csrfToken}")
+    input(type='hidden' name='isProtected')
   div#photoDetails.uk-modal
   div#requestAccess.uk-modal
 
