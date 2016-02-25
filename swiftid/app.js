@@ -69,6 +69,7 @@ passport.deserializeUser(function (id, done) {
 // re-authenticate every time the app is started.
 app.use(session({
   secret: 'keyboard cat',
+  name: 'sessionId',
   resave: false,
   saveUninitialized: false
 }))
