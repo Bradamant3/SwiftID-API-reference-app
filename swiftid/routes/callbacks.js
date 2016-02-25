@@ -18,6 +18,7 @@ See the License for the specific language governing permissions and limitations 
 var express = require('express')
 var tasks = require('../models/tasks')
 var photos = require('../models/photos')
+var notifier = require('../notifier')
 
 module.exports = function (clientId) {
   var router = express.Router()
@@ -30,7 +31,7 @@ module.exports = function (clientId) {
 
     // If the webhookValidationId is "true", then this is just a ping after
     // registering a webhook. There is nothing to do in that case.
-    if(webhookValidationId !== 'true') {
+    if (webhookValidationId !== 'true') {
       var taskStatus = req.body.taskStatus
       var taskReferenceId = req.body.taskReferenceId
 
@@ -44,6 +45,12 @@ module.exports = function (clientId) {
             if (taskStatus === 'APPROVED') {
               photos.addSharedUserId(photo._id, task.requestorId, function (addSharedErr) {})
             }
+            // Notify any listeners that the task has been changed
+            notifier.emit('task-status-changed', {
+              photoId: photo._id,
+              requestorId: task.requestorId,
+              status: taskStatus
+            })
           })
         })
       })

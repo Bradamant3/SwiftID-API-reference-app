@@ -110,3 +110,33 @@ block scripts
       form.find('input[name="isProtected"]').val(isProtected);
       form.submit();
     }
+    
+    // Set up web socket connection  
+    (function(){
+      var host = window.document.location.host;
+      var ws = new WebSocket('ws://' + host);
+      
+      // Called when a task has been approved or rejected
+      function taskStatusChanged (taskInfo) {
+        var photoId = taskInfo.photoId;
+        var status = taskInfo.status;
+        console.info('Photo ID ' + photoId + ' ' + status);
+        
+        // Simply refresh the page.  A more robust solution would update the view
+        window.location.reload();
+      }
+      
+      ws.onmessage = function(message) {
+        if (!message) {
+          console.error('Received an empty web socket message');
+          return;
+        }
+        try {
+          var taskInfo = JSON.parse(message.data);
+          taskStatusChanged(taskInfo);
+        }
+        catch (error) {
+          console.error('Failed to parse web socket message as JSON');
+        }
+      };
+    }())
