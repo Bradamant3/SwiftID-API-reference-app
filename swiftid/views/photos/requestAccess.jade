@@ -21,4 +21,5 @@ div.uk-modal-dialog
   div.uk-modal-footer.uk-text-right
     button.uk-button.close(type="button") Cancel
     form.request-access-form(action="/photos/#{photo._id}/requestAccess" method="POST" style="display: inline;")
+      input(type="hidden" name="_csrf" value="#{csrfToken}")
       button.uk-button.uk-button-primary(type="submit") Request

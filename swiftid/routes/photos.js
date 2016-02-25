@@ -17,6 +17,7 @@ See the License for the specific language governing permissions and limitations 
 
 var express = require('express')
 var _ = require('lodash')
+var csrf = require('csurf')
 var photos = require('../models/photos')
 var tasks = require('../models/tasks')
 var isAuthenticated = require('../middlewares/authentication')
@@ -26,6 +27,7 @@ var SwiftIdClient = require('../swiftid/swiftIdClient')
 module.exports = function (options) {
   var router = express.Router()
   var client = new SwiftIdClient(options.client, oauth(options.oauth))
+  var csrfProtection = csrf({ cookie: true })
 
   router.use(isAuthenticated)
 
@@ -33,7 +35,7 @@ module.exports = function (options) {
    * List out all photos the current user has uploaded and photos uploaded
    * by other users.
    */
-  router.get('/', function (req, res, next) {
+  router.get('/', csrfProtection, function (req, res, next) {
     var userId = req.user._id
     // Load all the current user's photos.
     photos.findByOwnerId(userId, function (ownerErr, ownedPhotos) {
@@ -49,6 +51,7 @@ module.exports = function (options) {
           if (taskErr) { return next(taskErr) }
 
           var viewModel = {
+            csrfToken: req.csrfToken(),
             ownedPhotos: photoViewModels(ownedPhotos, null),
             otherPhotos: photoViewModels(otherPhotos, tasks)
           }
@@ -77,9 +80,9 @@ module.exports = function (options) {
   })
 
   /**
-   * Update the proteced status of a photo.
+   * Update the protected status of a photo.
    */
-  router.post('/:photoId/isProtected', function (req, res, next) {
+  router.post('/:photoId/isProtected', csrfProtection, function (req, res, next) {
     var isProtected = req.body.isProtected === 'true'
     photos.updateValues(req.params.photoId, { isProtected: isProtected }, function (err) {
       if (err) return next(err)
@@ -128,17 +131,20 @@ module.exports = function (options) {
   /**
    * Get a page to request access to a protected photo.
    */
-  router.get('/:photoId/requestAccess', function (req, res, next) {
+  router.get('/:photoId/requestAccess', csrfProtection, function (req, res, next) {
     photos.findById(req.params.photoId, function (err, photo) {
       if (err) { return next(err) }
-      res.render('photos/requestAccess', { photo: photo })
+      res.render('photos/requestAccess', {
+        csrfToken: req.csrfToken(),
+        photo: photo
+      })
     })
   })
 
   /**
    * Call the SwiftID API to request access to the high-res version of a photo.
    */
-  router.post('/:photoId/requestAccess', function (req, res, next) {
+  router.post('/:photoId/requestAccess', csrfProtection, function (req, res, next) {
     photos.findById(req.params.photoId, function (photoErr, photo) {
       if (photoErr) { return next(photoErr) }
       var message = {
