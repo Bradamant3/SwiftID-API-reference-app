@@ -13,10 +13,17 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 */
 
-var Datastore = require('nedb')
-var path = require('path')
+var webhookConfirmation = require('../models/webhookConfirmation')
+var express = require('express')
+var router = express.Router()
 
-exports.users = new Datastore({ filename: path.join(__dirname, '/db/users.db'), autoload: true })
-exports.photos = new Datastore({ filename: path.join(__dirname, '/db/photos.db'), autoload: true })
-exports.tasks = new Datastore({ filename: path.join(__dirname, '/db/tasks.db'), autoload: true })
-exports.webhookConfirmation = new Datastore({ filename: path.join(__dirname, '/db/webhookConfirmation.db'), autoload: true })
+// Check if the user has confirmed the webhook
+router.use(function (req, res, next) {
+  webhookConfirmation.findFirst(function(err, webhookConfirmation) {
+    if(err) { return next(err) }
+    res.locals.webhookConfirmed = webhookConfirmation.confirmed
+    next()
+  })
+})
+
+module.exports = router

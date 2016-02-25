@@ -49,6 +49,9 @@ html
               a(href="/register") Register
             
     div.main-content.uk-container.uk-container-center
+      if !webhookConfirmed
+        div.uk-alert.uk-alert-danger
+          p You must register a webhook. Please see the README for instructions.
       block content
     
     script.

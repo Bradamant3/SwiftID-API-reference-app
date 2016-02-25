@@ -30,3 +30,35 @@ block content
         input(type="password", placeholder="password", name="password")
     div.uk-form-row
       button.uk-button.uk-button-primary(type="submit") Login
+
+  h3 Register Your Webhook
+  p The app must have an endpoint registered with SwiftID to use as a webhook callback when a SwiftID request is approved or rejected. These curl commands will authenticate and register the webhook.
+  p
+    b These commands only need to be run the first time you run the app. Please checkout the README for more information.
+  
+  p POST your client credentials to the OAuth endpoint:
+  pre
+    code
+      | curl -X POST http://localhost:3001/oauth/oauth20/token \
+      |      -d 'client_id=<client_id>' \
+      |      -d 'client_secret=<client_secret>' \
+      |      -d 'grant_type=client_credentials'
+
+  p The response will contain an access token:
+  pre
+    code
+      | HTTP/1.1 200 OK
+      | Content-Type: application/json
+      |    {
+      |        "access_token" : "5354e3a56036056cffb5a99f368a31cef3aee2a8",
+      |        "token_type" : "Bearer",
+      |        "expires_in" : 1295999
+      |    }
+
+  p Register the webhook, passing in the access_token:
+  pre
+    code
+    | curl -X POST http://localhost:3001/identity/webhooks\
+    |      -H "Content-Type: application/json"\
+    |      -H "Authorization: Bearer <access_token>"\
+    |      -d '{ "callbackUrl": "http://localhost:3000/photos/request-access-hook", "eventType": "ENHANCEDAUTHENTICATION" }'
