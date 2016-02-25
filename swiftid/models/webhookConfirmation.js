@@ -13,10 +13,24 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 */
 
-var Datastore = require('nedb')
-var path = require('path')
+/*
+ * Data access for webhook confirmations using NeDB.
+ * The app assumes there is only webhook to confirm.
+ */
+var db = require('../database').webhookConfirmation
 
-exports.users = new Datastore({ filename: path.join(__dirname, '/db/users.db'), autoload: true })
-exports.photos = new Datastore({ filename: path.join(__dirname, '/db/photos.db'), autoload: true })
-exports.tasks = new Datastore({ filename: path.join(__dirname, '/db/tasks.db'), autoload: true })
-exports.webhookConfirmation = new Datastore({ filename: path.join(__dirname, '/db/webhookConfirmation.db'), autoload: true })
+/*
+ * Find the only webhookConfirmation.
+ * @param  {Function} callback  See NeDB docs
+ */
+exports.findFirst = function (callback) {
+  db.findOne({}, callback)
+}
+
+ /**
+  * Mark the webhook as confirmed.
+  * @param  {Function} callback  See NeDB docs
+  */
+ exports.confirm = function (callback) {
+   db.update({}, { $set: { confirmed: true } }, callback)
+ }

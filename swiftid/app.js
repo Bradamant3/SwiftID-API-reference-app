@@ -79,8 +79,12 @@ app.use(function (req, res, next) {
   next()
 })
 
+// Setup webhook confirmation middleware
+app.use(require('./middlewares/webhook'))
+
 // Setup routes
 app.use(require('./routes')(config))
+
 
 // Setup error handlers
 app.use(require('./middlewares/errors'))

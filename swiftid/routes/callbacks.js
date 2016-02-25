@@ -18,6 +18,8 @@ See the License for the specific language governing permissions and limitations 
 var express = require('express')
 var tasks = require('../models/tasks')
 var photos = require('../models/photos')
+var webhookConfirmation = require('../models/webhookConfirmation')
+var debug = require('debug')('swiftid:callbacks')
 
 module.exports = function (clientId) {
   var router = express.Router()
@@ -27,10 +29,12 @@ module.exports = function (clientId) {
    */
   router.post('/photos/request-access-hook', function (req, res, next) {
     var webhookValidationId = req.get('webhookValidationId')
+    debug('webhookValidationId: ' + webhookValidationId)
 
     // If the webhookValidationId is "true", then this is just a ping after
     // registering a webhook. There is nothing to do in that case.
     if(webhookValidationId !== 'true') {
+      debug('Handling photo access hook callback')
       var taskStatus = req.body.taskStatus
       var taskReferenceId = req.body.taskReferenceId
 
@@ -47,6 +51,11 @@ module.exports = function (clientId) {
           })
         })
       })
+    }
+    else {
+      debug('Confirming photo access hook callback')
+      // Assume there is only one webhook to load.
+      webhookConfirmation.confirm(function(err) {})
     }
 
     // SwiftID expects to see this header with a 2xx response when calling

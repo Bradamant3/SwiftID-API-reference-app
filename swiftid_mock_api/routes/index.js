@@ -73,6 +73,21 @@ function callWebhook (status, webhook, task, callback) {
   })
 }
 
+function confirmWebhook(webhook, callback) {
+  var options = {
+    url: webhook.callbackUrl,
+    method: 'POST',
+    headers: {
+      'webhookValidationId': "true"
+    }
+  }
+
+  console.log(JSON.stringify(options))
+  request(options, function (err, response, body) {
+    callback()
+  })
+}
+
 router.post('/identity/enhanced-authentication/tasks', function (req, res, next) {
   var task = {
     webhookValidationId: req.get('webhookValidationId'),
@@ -107,12 +122,14 @@ router.post('/identity/webhooks', function (req, res, next) {
   }
 
   webhooks.create(webhook, function (err, newWebhook) {
-    var responseBody = {
-      webhookId: newWebhook._id,
-      callbackUrl: newWebhook.callbackUrl,
-      eventType: newWebhook.eventType
-    }
-    res.status(201).json(responseBody)
+    confirmWebhook(newWebhook, function() {
+      var responseBody = {
+        webhookId: newWebhook._id,
+        callbackUrl: newWebhook.callbackUrl,
+        eventType: newWebhook.eventType
+      }
+      res.status(201).json(responseBody)
+    })
   })
 })
 
