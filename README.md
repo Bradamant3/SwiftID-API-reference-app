@@ -105,6 +105,9 @@ Switch back to http://localhost:3000/photos and refresh the page. You will see t
 
 To get a deeper look at the messages being passed, start the app with the following command `DEBUG=swiftid:* NODE_DEBUG=request npm start`.  This will activate detailed debug logging to the console, showing the details of the request to the API and the response received.
 
+## Best Practices
+This application makes use of the [helmet](https://www.npmjs.com/package/helmet) library for safer http headers, and the [csurf](https://www.npmjs.com/package/csurf) library to avoid cross-site request forgery attacks. However, when developing and hosting a real world application, make sure to be aware of the [security](http://expressjs.com/en/advanced/best-practice-security.html) and [performance](http://expressjs.com/en/advanced/best-practice-performance.html) best practices for the Express framework. In particular, session management should not be handled in-memory, passwords should always be hashed, and hosting with TLS is strongly recommended.  Free certificates can be acquired at https://letsencrypt.org/.
+
 ## Architecture
 PhotoShed is a [Node.js](https://nodejs.org) 4.x and higher app built with [Express](http://expressjs.com/) 4.13.1. It uses [NeDB](https://github.com/louischatriot/nedb) 1.7.3 for the persistence layer and [Passport](http://passportjs.org/) for authentication.
 
@@ -121,4 +124,3 @@ This reference app code is intended as a starting place for developers who want 
 
 ## Contribution Guidelines
 We encourage any contributions that align with the intent of this project and add more functionality or languages that other developers can make use of. To contribute to the project, please submit a PR for our review. Before contributing any source code, familiarize yourself with the Apache License 2.0 (license.md), which controls the licensing for this project.
-
