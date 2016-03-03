@@ -21,43 +21,6 @@ var users = require('../models/users')
 
 var csrfProtection = csrf({ cookie: true })
 
-/* GET registration page */
-router.get('/register', csrfProtection, function (req, res, next) {
-  res.render('register', {
-    csrfToken: req.csrfToken(),
-    error: req.flash('error')
-  })
-})
-
-/* POST registration page */
-router.post('/register', csrfProtection, function (req, res, next) {
-  // Get username and password params.
-  var username = req.body.username
-  var password = req.body.password
-
-  // Check if this user already exists.
-  users.findByUsername(username, function (findErr, user) {
-    if (findErr) { next(findErr) }
-    if (user === null) {
-      users.create(username, password, function (userErr, newUser) {
-        if (userErr) { return next(userErr) }
-
-        // On creation, log in as the new user
-        req.login(newUser, function (loginErr) {
-          if (loginErr) {
-            return next(loginErr)
-          }
-          res.redirect('/photos')
-        })
-      })
-    } else {
-      // The user already exists. Notify the user.
-      req.flash('error', 'Username already taken')
-      res.redirect('/register')
-    }
-  })
-})
-
 router.get('/login', csrfProtection, function (req, res, next) {
   res.render('login', {
     csrfToken: req.csrfToken(),

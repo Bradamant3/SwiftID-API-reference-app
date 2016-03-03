@@ -17,17 +17,6 @@ See the License for the specific language governing permissions and limitations 
 var db = require('../database').users
 
 /**
- * Create a new user
- * @param  {string}   username
- * @param  {string}   password
- * @param  {Function} callback See NeDB docs.
- */
-exports.create = function (username, password, callback) {
-  var user = { username: username, password: password }
-  db.insert(user, callback)
-}
-
-/**
  * Load a user by id
  * @param  {string}   userId The id of the user to find.
  * @param  {Function} callback See NeDB docs.
