@@ -27,7 +27,7 @@ var _ = require('lodash')
 exports.findById = function (userId, callback) {
   db.findOne({ _id: userId }, function (err, user) {
     if (err) { return callback(err) }
-    callback(decryptUserToken(user))
+    callback(null, decryptUserToken(user))
   })
 }
 
@@ -39,7 +39,7 @@ exports.findById = function (userId, callback) {
 exports.findByUsername = function (username, callback) {
   db.findOne({ username: username }, function (err, user) {
     if (err) { return callback(err) }
-    callback(decryptUserToken(user))
+    callback(null, decryptUserToken(user))
   })
 }
 
