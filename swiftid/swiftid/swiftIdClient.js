@@ -21,8 +21,7 @@ var format = require('util').format
 
 // Default to a secure call to the API endpoint
 var defaultOptions = {
-  // TODO: update this value with actual/staging api host
-  url: 'https://api.capitalone.com/identity',
+  url: 'https://api.capitalone.com',
   apiVersion: 1
 }
 
