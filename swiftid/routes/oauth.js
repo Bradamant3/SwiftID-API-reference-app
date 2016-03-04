@@ -26,7 +26,6 @@ module.exports = function (options) {
    * Begin the oauth process by redirecting the user to COF
    */
   router.get('/', isAuthenticated, function (req, res, next) {
-    // TODO: check whether the user actually needs oauth
     res.redirect(301, oauth.getRedirectUrl())
   })
 

@@ -13,6 +13,9 @@ You can learn how to install Node.js on your platform at https://nodejs.org/en/d
 ### config.js
 config.js contains information specific to your app, such as your client_id and client_secret. Create this file by copying [config.js.sample](/swiftid/config.js.sample). Be careful not to put config.js into version control.
 
+#### Generating an encryption key
+This app uses the crypto module to encrypt/decrypt certain sensitive values.  You can generate a new encryption key by running the script in ./bin/cryptoKey.js from your node console (`node ./bin/cryptoKey.js` from within the swiftid directory), and pasting the resulting value into the `cryptoKey` section of your config.js file.
+
 ### Start the mock API
 From the project root:  
 `cd swiftid_mock_api`  

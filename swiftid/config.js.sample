@@ -40,5 +40,7 @@ module.exports = {
       // E.g. a value of 10 and an expires_in of 900 will cause a refresh after 890 seconds or more
       expirationThreshold: 2
     }
-  }
+  },
+  // See the README for instructions on generating this key
+  cryptoKey: ''
 }

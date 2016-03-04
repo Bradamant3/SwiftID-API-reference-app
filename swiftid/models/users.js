@@ -15,6 +15,8 @@ See the License for the specific language governing permissions and limitations 
 
 /* Data access for users using NeDB. */
 var db = require('../database').users
+var crypto = require('../utility/crypto')
+var _ = require('lodash')
 
 /**
  * Load a user by id
@@ -23,7 +25,10 @@ var db = require('../database').users
  */
 
 exports.findById = function (userId, callback) {
-  db.findOne({ _id: userId }, callback)
+  db.findOne({ _id: userId }, function (err, user) {
+    if (err) { return callback(err) }
+    callback(null, decryptUserToken(user))
+  })
 }
 
 /**
@@ -32,7 +37,10 @@ exports.findById = function (userId, callback) {
  * @param  {Function} callback See NeDB docs.
  */
 exports.findByUsername = function (username, callback) {
-  db.findOne({ username: username }, callback)
+  db.findOne({ username: username }, function (err, user) {
+    if (err) { return callback(err) }
+    callback(null, decryptUserToken(user))
+  })
 }
 
 /**
@@ -42,8 +50,34 @@ exports.findByUsername = function (username, callback) {
  * @param  {Function} callback    See NeDB docs.
  */
 exports.updateAccessToken = function (userId, accessToken, callback) {
-  db.update({ _id: userId }, { $set: { accessToken: accessToken } }, {}, function (err, updateCount) {
+  var encryptedToken = encryptTokenValues(accessToken)
+  db.update({ _id: userId }, { $set: { accessToken: encryptedToken } }, {}, function (err, updateCount) {
     if (err) { return callback(err) }
     callback(null, accessToken)
   })
+}
+
+function decryptUserToken (user) {
+  if (user.accessToken) {
+    user.accessToken = decryptTokenValues(user.accessToken)
+  }
+  return user
+}
+
+function encryptTokenValues (token) {
+  var tokenClone = _.assign({}, token)
+  var props = ['access_token', 'refresh_token', 'id_token']
+  props.forEach(function (key) {
+    tokenClone[key] = crypto.encrypt(tokenClone[key])
+  })
+  return tokenClone
+}
+
+function decryptTokenValues (token) {
+  var tokenClone = _.assign({}, token)
+  var props = ['access_token', 'refresh_token', 'id_token']
+  props.forEach(function (key) {
+    tokenClone[key] = crypto.decrypt(tokenClone[key])
+  })
+  return tokenClone
 }
