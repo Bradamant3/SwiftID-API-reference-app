@@ -16,20 +16,14 @@ config.js contains information specific to your app, such as your client_id and 
 #### Generating an encryption key
 This app uses the crypto module to encrypt/decrypt certain sensitive values.  You can generate a new encryption key by running the script in ./bin/cryptoKey.js from your node console (`node ./bin/cryptoKey.js` from within the swiftid directory), and pasting the resulting value into the `cryptoKey` section of your config.js file.
 
-### Start the mock API
-From the project root:  
-`cd swiftid_mock_api`  
-`npm install`  
-`npm start`
-
-### Register a webhook with the mock API
+### Register a webhook with the SwiftID API
 The app must have an endpoint registered with SwiftID to use as a webhook callback when a SwiftID request is approved or rejected. These curl commands will authenticate and register the webhook.
 
 **These commands only need to be run the first time you run the app**
 
 POST your client credentials to the OAuth endpoint:
 ```
-curl -X POST http://localhost:3001/oauth/oauth20/token\
+curl -X POST https://api-sandbox.capitalone.com/oauth/oauth20/token\
      -d 'client_id=<client_id>' \
      -d 'client_secret=<client_secret>' \
      -d 'grant_type=client_credentials'
@@ -47,7 +41,7 @@ Content-Type: application/json
 
 Register the webhook, passing in the access_token:
 ```
-curl -X POST http://localhost:3001/identity/webhooks\
+curl -X POST https://api-sandbox.capitalone.com/identity/webhooks\
    -H "Content-Type: application/json"\
    -H "Authorization: Bearer <access_token>"\
    -d '{ "callbackUrl": "http://localhost:3000/photos/request-access-hook",
