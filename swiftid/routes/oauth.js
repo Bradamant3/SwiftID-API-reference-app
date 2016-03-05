@@ -33,7 +33,7 @@ module.exports = function (options) {
    * Expose a callback for COF to redirect back with an authorization code
    */
   router.get('/callback', isAuthenticated, function (req, res, next) {
-    var code = req.query['authorizationCode']
+    var code = req.query['code']
     debug('Received authorization code: ' + code)
     oauth.getAccessToken(code, req.user._id, function (err) {
       if (err) { return next(err) }
