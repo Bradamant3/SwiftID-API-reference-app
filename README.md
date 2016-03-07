@@ -16,6 +16,12 @@ config.js contains information specific to your app, such as your client_id and 
 #### Generating an encryption key
 This app uses the crypto module to encrypt/decrypt certain sensitive values.  You can generate a new encryption key by running the script in ./bin/cryptoKey.js from your node console (`node ./bin/cryptoKey.js` from within the swiftid directory), and pasting the resulting value into the `cryptoKey` section of your config.js file.
 
+### Start PhotoShed
+From the project root:  
+`cd swiftid`  
+`npm install`  
+`npm start`
+
 ### Register a webhook with the SwiftID API
 The app must have an endpoint registered with SwiftID to use as a webhook callback when a SwiftID request is approved or rejected. These curl commands will authenticate and register the webhook.
 
@@ -48,12 +54,6 @@ curl -i -k -tlsv1 -X POST https://api-sandbox.capitalone.com/identity/webhooks\
    -d '{ "callbackUrl": "https://your.app.here:3000/photos/request-access-hook",
    "eventType": "EnhancedAuthentication" }'
 ```
-
-### Start PhotoShed
-From the project root:  
-`cd swiftid`  
-`npm install`  
-`npm start`
 
 ### Log in as photo_owner
 The app comes with two pre-registered users, photo_owner and photo_requestor. Start by navigating to http://localhost:3000/. You will see a login form. Login with the following credentials
