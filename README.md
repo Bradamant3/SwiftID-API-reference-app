@@ -24,8 +24,8 @@ The app must have an endpoint registered with SwiftID to use as a webhook callba
 POST your client credentials to the OAuth endpoint:
 ```
 curl -X POST https://api-sandbox.capitalone.com/oauth/oauth20/token\
-     -d 'client_id=<client_id>' \
-     -d 'client_secret=<client_secret>' \
+     -d 'client_id=<client_id>'\
+     -d 'client_secret=<client_secret>'\
      -d 'grant_type=client_credentials'
 ```
 The response will contain an access token:
@@ -43,6 +43,7 @@ Register the webhook, passing in the access_token:
 ```
 curl -X POST https://api-sandbox.capitalone.com/identity/webhooks\
    -H "Content-Type: application/json"\
+   -H "Accept: application/json; v=1"\
    -H "Authorization: Bearer <access_token>"\
    -d '{ "callbackUrl": "http://localhost:3000/photos/request-access-hook",
    "eventType": "EnhancedAuthentication" }'
