@@ -45,7 +45,7 @@ curl -X POST https://api-sandbox.capitalone.com/identity/webhooks\
    -H "Content-Type: application/json"\
    -H "Authorization: Bearer <access_token>"\
    -d '{ "callbackUrl": "http://localhost:3000/photos/request-access-hook",
-   "eventType": "ENHANCEDAUTHENTICATION" }'
+   "eventType": "EnhancedAuthentication" }'
 ```
 
 ### Start PhotoShed
