@@ -41,11 +41,11 @@ Content-Type: application/json
 
 Register the webhook, passing in the access_token:
 ```
-curl -X POST https://api-sandbox.capitalone.com/identity/webhooks\
+curl -i -k -tlsv1 -X POST https://api-sandbox.capitalone.com/identity/webhooks\
    -H "Content-Type: application/json"\
    -H "Accept: application/json; v=1"\
    -H "Authorization: Bearer <access_token>"\
-   -d '{ "callbackUrl": "http://localhost:3000/photos/request-access-hook",
+   -d '{ "callbackUrl": "https://your.app.here:3000/photos/request-access-hook",
    "eventType": "EnhancedAuthentication" }'
 ```
 

@@ -58,7 +58,7 @@ block content
   p Register the webhook, passing in the access_token:
   pre
     code
-    | curl -X POST https://api-sandbox.capitalone.com/identity/webhooks\
+    | curl -i -k -tlsv1 -X POST https://api-sandbox.capitalone.com/identity/webhooks\
     |      -H "Content-Type: application/json"\
     |      -H "Accept: application/json; v=1"\
     |      -H "Authorization: Bearer &lt;access_token&gt;"\
