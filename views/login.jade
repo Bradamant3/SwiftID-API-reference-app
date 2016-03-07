@@ -40,8 +40,8 @@ block content
   pre
     code
       | curl -X POST https://api-sandbox.capitalone.com/oauth/oauth20/token \
-      |      -d 'client_id=<client_id>' \
-      |      -d 'client_secret=<client_secret>' \
+      |      -d 'client_id=&lt;client_id&gt;' \
+      |      -d 'client_secret=&lt;client_secret&gt;' \
       |      -d 'grant_type=client_credentials'
 
   p The response will contain an access token:
@@ -60,5 +60,5 @@ block content
     code
     | curl -X POST https://api-sandbox.capitalone.com/identity/webhooks\
     |      -H "Content-Type: application/json"\
-    |      -H "Authorization: Bearer <access_token>"\
+    |      -H "Authorization: Bearer &lt;access_token&gt;"\
     |      -d '{ "callbackUrl": "https://your.app.here/photos/request-access-hook", "eventType": "ENHANCEDAUTHENTICATION" }'
