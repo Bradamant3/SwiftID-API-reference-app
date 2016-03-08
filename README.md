@@ -26,7 +26,7 @@ From the project root:
 `npm start`
 
 ### Register a webhook with the SwiftID API
-The app must have an endpoint registered with SwiftID to use as a webhook callback when a SwiftID request is approved or rejected. These curl commands will authenticate and register the webhook.
+The app must have an endpoint registered with SwiftID to use as a webhook callback when a SwiftID request is approved or rejected. These curl commands will authenticate and register the webhook. In production this endpoint must be secured with HTTPS, but the sandbox environment does not require this.
 
 **These commands only need to be run the first time you run the app**
 
