@@ -1,6 +1,3 @@
-# Ignore config files. Users should copy the sample.
-config.js
-
 # Thumbs
 Thumbs.db
 

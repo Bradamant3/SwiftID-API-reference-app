@@ -12,19 +12,9 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 */
-
-/*
- * Copy this file to config.js and enter your configuration info.
- * config.js should not be under version control since it contains your
- * client_id and client_secret.
- */
 var oauthHost = 'https://api-sandbox.capitalone.com'
 var swiftidHost = 'https://api-sandbox.capitalone.com'
-/*
- * In order for OAuth and webhooks to work, you will need to host your app publicly.
- * Replace the URL below with a publicly-accessible one.
- */
-var appHost = 'http://localhost:3000'
+var appHost = process.env.SWIFTID_APP_HOST || 'http://localhost:3000'
 
 module.exports = {
   swiftid: {
@@ -37,14 +27,13 @@ module.exports = {
       authorizationURL: oauthHost + '/oauth/auz/authorize',
       tokenURL: oauthHost + '/oauth/oauth20/token',
       // The clientId and clientSecret you received when registering your app.
-      clientID: 'COF_CLIENT_ID',
-      clientSecret: 'COF_CLIENT_SECRET',
-      redirectURI: appHost + '/oauth/callback',
+      clientID: process.env.SWIFTID_CLIENT_ID,
+      clientSecret: process.env.SWIFTID_CLIENT_SECRET,
+      callbackURL: appHost + '/oauth/callback',
       // Defines the range of time (in seconds) before the token's 'expires_in' value will cause a refresh
       // E.g. a value of 10 and an expires_in of 900 will cause a refresh after 890 seconds or more
-      expirationThreshold: 2
+      expirationThreshold: 60
     }
   },
-  // See the README for instructions on generating this key
-  cryptoKey: ''
+  cryptoKey: process.env.SWIFTID_CRYPTO_KEY
 }
