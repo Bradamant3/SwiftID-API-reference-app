@@ -29,9 +29,7 @@ module.exports = function (clientId) {
    * Called by SwiftID when a request is approved or rejected.
    */
   router.post('/photos/request-access-hook', function (req, res, next) {
-    var webhookValidationId = req.get('webhookValidationId')
     var webhookValidation = req.get('webhookValidation')
-    debug('webhookValidationId: ' + webhookValidationId)
     debug('webhookValidation: ' + webhookValidation)
 
     // If the webhookValidationId is "true", then this is just a ping after

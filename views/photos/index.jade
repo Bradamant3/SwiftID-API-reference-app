@@ -115,7 +115,8 @@ block scripts
     // Set up web socket connection  
     (function(){
       var host = window.document.location.host;
-      var ws = new WebSocket('ws://' + host);
+      var protocol = window.location.protocol == 'https:' ? 'wss://' : 'ws://'
+      var ws = new WebSocket(protocol + host);
       
       // Called when a task has been approved or rejected
       function taskStatusChanged (taskInfo) {
