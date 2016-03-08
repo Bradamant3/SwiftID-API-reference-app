@@ -11,7 +11,7 @@ The only dependency that must be manually installed is [Node.js](https://nodejs.
 You can learn how to install Node.js on your platform at https://nodejs.org/en/download/.
 
 ### Create your developer account and test app
-Sign up for a developer account at https://developer.capitalone.com/. Then, create your first app at https://developer.capitalone.com/app-registration/. After signing up, you will see your Client Id and Client Secret. You will need both of these for your config.js. Next, be sure to set your Redirect URI for OAuth.
+Sign up for a developer account at https://developer.capitalone.com/. Then, create your first app at https://developer.capitalone.com/app-registration/. After signing up, you will see your Client Id and Client Secret. You will need both of these for your config.js. Next, be sure to set your Redirect URI for OAuth. Finally, under "Connected API Products", add a product and select SwiftID.
 
 ### config.js
 config.js contains information specific to your app, such as your client_id and client_secret. Create this file by copying [config.js.sample](/swiftid/config.js.sample). The sample version points to the sandbox environment at https://api-sandbox.capitalone.com/. Be careful not to put config.js into version control.
