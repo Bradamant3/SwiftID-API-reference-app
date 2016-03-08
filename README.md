@@ -93,13 +93,13 @@ The photo that was protected by photo_owner should have a lock icon in the upper
 ![photo_requestor request modal](/docs/photo_requestor_request_modal.png)
 
 ### Approve the request
-Switch over to the mock API dashboard http://localhost:3001/. This will list out all open SwiftID requests. Go ahead and approve the request.
+Go to the developer dashboard and view [your apps](https://developer.capitalone.com/my-account/). You need to drill down to the page that lists all SwiftID requests for your app. First, click on your app. Then, scroll down and click the "View Test Data" button. This will list out the test users for your app. You should also see a "Notifications" link. Click that and you should see a listing of all SwiftID requests for your app. Approve the open task.
 
-![mock API open request](/docs/mock_api_open_request.png)
+![developer dashboard open request](/docs/developer_dashboard_open_request.png)
 
 ### Access the photo as photo_requestor
 Switch back to http://localhost:3000/photos and refresh the page. You will see that lock icon has switched to unlocked. If you click the thumbnail, you will now see a "View Full Resolution" link. Click it to see the high resolution image.
-
+n
 ![photo_requestor access granted](/docs/photo_requestor_granted.png)
 
 ### Viewing more details
