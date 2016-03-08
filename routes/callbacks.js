@@ -43,13 +43,41 @@ module.exports = function (clientId) {
 
       // Find the SwiftID task that was completed.
       tasks.findById(taskReferenceId, function (taskErr, task) {
+        if (taskErr) {
+          console.error(taskErr)
+          return
+        }
+        if (!task) {
+          console.error('No task found with ID ' + taskReferenceId)
+          return
+        }
+
         // Find the photo for that task.
         photos.findById(task.photoId, function (photoErr, photo) {
+          if (photoErr) {
+            console.error(photoErr)
+            return
+          }
+          if (!photo) {
+            console.error('No photo found with ID ' + task.photoId)
+            return
+          }
+
           // Update the status on the task.
           tasks.updateValues(taskReferenceId, { status: taskStatus }, function (updateErr) {
+            if (updateErr) {
+              console.error(updateErr)
+              return
+            }
+
             // If accepted, add the user to sharedWith on the photo.
             if (taskStatus === 'APPROVED') {
-              photos.addSharedUserId(photo._id, task.requestorId, function (addSharedErr) {})
+              photos.addSharedUserId(photo._id, task.requestorId, function (addSharedErr) {
+                if (addSharedErr) {
+                  console.error(addSharedErr)
+                  return
+                }
+              })
             }
             // Notify any listeners that the task has been changed
             notifier.emit('task-status-changed', {
