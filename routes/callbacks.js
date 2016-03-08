@@ -30,24 +30,54 @@ module.exports = function (clientId) {
    */
   router.post('/photos/request-access-hook', function (req, res, next) {
     var webhookValidationId = req.get('webhookValidationId')
+    var webhookValidation = req.get('webhookValidation')
     debug('webhookValidationId: ' + webhookValidationId)
+    debug('webhookValidation: ' + webhookValidation)
 
     // If the webhookValidationId is "true", then this is just a ping after
     // registering a webhook. There is nothing to do in that case.
-    if (webhookValidationId !== 'true') {
+    if (webhookValidation !== 'true') {
       debug('Handling photo access hook callback')
       var taskStatus = req.body.taskStatus
       var taskReferenceId = req.body.taskReferenceId
 
       // Find the SwiftID task that was completed.
       tasks.findById(taskReferenceId, function (taskErr, task) {
+        if (taskErr) {
+          console.error(taskErr)
+          return
+        }
+        if (!task) {
+          console.error('No task found with ID ' + taskReferenceId)
+          return
+        }
+
         // Find the photo for that task.
         photos.findById(task.photoId, function (photoErr, photo) {
+          if (photoErr) {
+            console.error(photoErr)
+            return
+          }
+          if (!photo) {
+            console.error('No photo found with ID ' + task.photoId)
+            return
+          }
+
           // Update the status on the task.
           tasks.updateValues(taskReferenceId, { status: taskStatus }, function (updateErr) {
+            if (updateErr) {
+              console.error(updateErr)
+              return
+            }
+
             // If accepted, add the user to sharedWith on the photo.
             if (taskStatus === 'APPROVED') {
-              photos.addSharedUserId(photo._id, task.requestorId, function (addSharedErr) {})
+              photos.addSharedUserId(photo._id, task.requestorId, function (addSharedErr) {
+                if (addSharedErr) {
+                  console.error(addSharedErr)
+                  return
+                }
+              })
             }
             // Notify any listeners that the task has been changed
             notifier.emit('task-status-changed', {

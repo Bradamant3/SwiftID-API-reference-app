@@ -10,28 +10,31 @@ The only dependency that must be manually installed is [Node.js](https://nodejs.
 
 You can learn how to install Node.js on your platform at https://nodejs.org/en/download/.
 
+### Create your developer account and test app
+Sign up for a developer account at https://developer.capitalone.com/. Then, create your first app at https://developer.capitalone.com/app-registration/. After signing up, you will see your Client Id and Client Secret. You will need both of these for your config.js. Next, be sure to set your Redirect URI for OAuth.
+
 ### config.js
-config.js contains information specific to your app, such as your client_id and client_secret. Create this file by copying [config.js.sample](/swiftid/config.js.sample). Be careful not to put config.js into version control.
+config.js contains information specific to your app, such as your client_id and client_secret. Create this file by copying [config.js.sample](/swiftid/config.js.sample). The sample version points to the sandbox environment at https://api-sandbox.capitalone.com/. Be careful not to put config.js into version control.
 
 #### Generating an encryption key
 This app uses the crypto module to encrypt/decrypt certain sensitive values.  You can generate a new encryption key by running the script in ./bin/cryptoKey.js from your node console (`node ./bin/cryptoKey.js` from within the swiftid directory), and pasting the resulting value into the `cryptoKey` section of your config.js file.
 
-### Start the mock API
+### Start PhotoShed
 From the project root:  
-`cd swiftid_mock_api`  
+`cd swiftid`  
 `npm install`  
 `npm start`
 
-### Register a webhook with the mock API
-The app must have an endpoint registered with SwiftID to use as a webhook callback when a SwiftID request is approved or rejected. These curl commands will authenticate and register the webhook.
+### Register a webhook with the SwiftID API
+The app must have an endpoint registered with SwiftID to use as a webhook callback when a SwiftID request is approved or rejected. These curl commands will authenticate and register the webhook. In production this endpoint must be secured with HTTPS, but the sandbox environment does not require this.
 
 **These commands only need to be run the first time you run the app**
 
 POST your client credentials to the OAuth endpoint:
 ```
-curl -X POST http://localhost:3001/oauth/oauth20/token\
-     -d 'client_id=<client_id>' \
-     -d 'client_secret=<client_secret>' \
+curl -X POST https://api-sandbox.capitalone.com/oauth/oauth20/token\
+     -d 'client_id=<client_id>'\
+     -d 'client_secret=<client_secret>'\
      -d 'grant_type=client_credentials'
 ```
 The response will contain an access token:
@@ -47,18 +50,13 @@ Content-Type: application/json
 
 Register the webhook, passing in the access_token:
 ```
-curl -X POST http://localhost:3001/identity/webhooks\
+curl -i -k -tlsv1 -X POST https://api-sandbox.capitalone.com/identity/webhooks\
    -H "Content-Type: application/json"\
+   -H "Accept: application/json; v=1"\
    -H "Authorization: Bearer <access_token>"\
-   -d '{ "callbackUrl": "http://localhost:3000/photos/request-access-hook",
-   "eventType": "ENHANCEDAUTHENTICATION" }'
+   -d '{ "callbackUrl": "https://your.app.here:3000/photos/request-access-hook",
+   "eventType": "EnhancedAuthentication" }'
 ```
-
-### Start PhotoShed
-From the project root:  
-`cd swiftid`  
-`npm install`  
-`npm start`
 
 ### Log in as photo_owner
 The app comes with two pre-registered users, photo_owner and photo_requestor. Start by navigating to http://localhost:3000/. You will see a login form. Login with the following credentials

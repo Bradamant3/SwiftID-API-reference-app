@@ -67,7 +67,7 @@ SwiftIdClient.prototype.createTask = function (ownerId, message, callback) {
         bearer: token.access_token
       },
       json: true,
-      body: message
+      body: { 'message': message }
     }
 
     debug('Creating SwiftID task', reqOptions)

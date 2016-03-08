@@ -149,7 +149,7 @@ module.exports = function (options) {
       if (photoErr) { return next(photoErr) }
       var message = {
         clientApp: 'PhotoShed',
-        action: 'view your high-res photo, ' + photo.name,
+        action: 'view your high res photo ' + photo.name,
         requestorName: req.user.username
       }
 
