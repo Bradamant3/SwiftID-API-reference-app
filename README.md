@@ -99,7 +99,7 @@ Go to the developer dashboard and view [your apps](https://developer.capitalone.
 
 ### Access the photo as photo_requestor
 Switch back to http://localhost:3000/photos and refresh the page. You will see that lock icon has switched to unlocked. If you click the thumbnail, you will now see a "View Full Resolution" link. Click it to see the high resolution image.
-n
+
 ![photo_requestor access granted](/docs/photo_requestor_granted.png)
 
 ### Viewing more details
