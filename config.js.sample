@@ -20,6 +20,10 @@ See the License for the specific language governing permissions and limitations 
  */
 var oauthHost = 'https://api-sandbox.capitalone.com'
 var swiftidHost = 'https://api-sandbox.capitalone.com'
+/*
+ * In order for OAuth and webhooks to work, you will need to host your app publicly.
+ * Replace the URL below with a publicly-accessible one.
+ */
 var appHost = 'http://localhost:3000'
 
 module.exports = {
