@@ -28,7 +28,7 @@ module.exports = function (options) {
   var authorizationURL = options.authorizationURL
   var tokenURL = options.tokenURL
   // The URL for COF to call back to and send the authorization code
-  var callbackURL = options.callbackURL
+  var redirectURI = options.redirectURI
   // Defines the range of time (in seconds) before the token's 'expires_in' value will cause a refresh
   // E.g. a value of 10 and an expires_in of 900 will cause a refresh after 890 seconds or more
   var expirationThreshold = options.expirationThreshold || 0
@@ -40,7 +40,7 @@ module.exports = function (options) {
     var url = authorizationURL
     var params = {
       'client_id': clientID,
-      'redirect_uri': callbackURL,
+      'redirect_uri': redirectURI,
       'scope': 'openid swiftid',
       'response_type': 'code'
     }
@@ -61,7 +61,7 @@ module.exports = function (options) {
         'code': authorizationCode,
         'client_id': clientID,
         'client_secret': clientSecret,
-        'redirect_uri': callbackURL,
+        'redirect_uri': redirectURI,
         'grant_type': 'authorization_code'
       }
     }
@@ -111,7 +111,7 @@ module.exports = function (options) {
         'client_id': clientID,
         'client_secret': clientSecret,
         'grant_type': 'refresh_token',
-        'redirect_uri': callbackURL,
+        'redirect_uri': redirectURI,
         'refresh_token': token.refresh_token
       }
     }
