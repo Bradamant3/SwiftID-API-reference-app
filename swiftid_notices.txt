@@ -1,854 +1,660 @@
-├─ accepts@1.2.13
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/accepts
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\accepts\LICENSE
-├─ acorn-globals@1.0.9
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/ForbesLindesay/acorn-globals
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\acorn-globals\LICENSE
-├─ acorn@1.2.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/marijnh/acorn
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\with\node_modules\acorn\LICENSE
-├─ acorn@2.7.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/ternjs/acorn
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\acorn\LICENSE
-├─ align-text@0.1.4
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jonschlinkert/align-text
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\align-text\LICENSE
-├─ amdefine@1.0.0
-│  ├─ licenses: BSD-3-Clause AND MIT
-│  ├─ repository: https://github.com/jrburke/amdefine
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\amdefine\LICENSE
-├─ ansi-regex@2.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/sindresorhus/ansi-regex
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\ansi-regex\license
-├─ ansi-styles@2.2.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/chalk/ansi-styles
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\ansi-styles\license
-├─ array-flatten@1.1.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/blakeembrey/array-flatten
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\array-flatten\LICENSE
-├─ asap@1.0.0
-│  ├─ licenses: MIT
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\asap\LICENSE.md
-├─ asn1@0.2.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/mcavage/node-asn1
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\asn1\LICENSE
-├─ assert-plus@0.2.0
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/mcavage/node-assert-plus
-├─ assert-plus@1.0.0
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/mcavage/node-assert-plus
-├─ async@0.2.10
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/caolan/async
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\async\LICENSE
-├─ async@1.5.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/caolan/async
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\form-data\node_modules\async\LICENSE
-├─ aws-sign2@0.6.0
-│  ├─ licenses: Apache-2.0
-│  ├─ repository: https://github.com/mikeal/aws-sign
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\aws-sign2\LICENSE
-├─ aws4@1.3.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/mhart/aws4
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\aws4\LICENSE
-├─ base64-url@1.2.1
-│  ├─ licenses: ISC
-│  ├─ repository: https://github.com/joaquimserafim/base64-url
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\base64-url\LICENSE
-├─ basic-auth@1.0.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/basic-auth
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\basic-auth\LICENSE
-├─ binary-search-tree@0.2.5
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/louischatriot/node-binary-search-tree
-├─ bl@1.0.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/rvagg/bl
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\bl\LICENSE.md
-├─ body-parser@1.13.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/expressjs/body-parser
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\body-parser\LICENSE
-├─ boom@2.10.1
-│  ├─ licenses: BSD-3-Clause
-│  ├─ repository: https://github.com/hapijs/boom
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\boom\LICENSE
-├─ bytes@2.1.0
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/visionmedia/bytes.js
-├─ bytes@2.2.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/visionmedia/bytes.js
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\raw-body\node_modules\bytes\LICENSE
-├─ camelcase@1.2.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/sindresorhus/camelcase
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\camelcase\license
-├─ camelize@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/substack/camelize
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\camelize\LICENSE
-├─ caseless@0.11.0
-│  ├─ licenses: Apache-2.0
-│  ├─ repository: https://github.com/mikeal/caseless
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\caseless\LICENSE
-├─ center-align@0.1.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jonschlinkert/center-align
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\center-align\LICENSE
-├─ chalk@1.1.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/chalk/chalk
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\chalk\license
-├─ character-parser@1.2.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/ForbesLindesay/character-parser
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\character-parser\LICENSE
-├─ clean-css@3.4.10
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jakubpawlowicz/clean-css
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\clean-css\LICENSE
-├─ cliui@2.1.0
-│  ├─ licenses: ISC
-│  ├─ repository: https://github.com/bcoe/cliui
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\cliui\LICENSE.txt
-├─ color-convert@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/qix-/color-convert
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\color-convert\LICENSE
-├─ combined-stream@1.0.5
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/felixge/node-combined-stream
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\combined-stream\License
-├─ commander@2.6.0
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/tj/commander.js
-├─ commander@2.8.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/tj/commander.js
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\clean-css\node_modules\commander\LICENSE
-├─ commander@2.9.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/tj/commander.js
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\har-validator\node_modules\commander\LICENSE
-├─ connect-flash@0.1.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jaredhanson/connect-flash
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\connect-flash\LICENSE
-├─ connect@3.4.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/senchalabs/connect
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\connect\LICENSE
-├─ constantinople@3.0.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/ForbesLindesay/constantinople
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\constantinople\LICENSE
-├─ content-disposition@0.5.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/content-disposition
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\content-disposition\LICENSE
-├─ content-security-policy-builder@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/helmetjs/content-security-policy-builder
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\content-security-policy-builder\LICENSE
-├─ content-type@1.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/content-type
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\content-type\LICENSE
-├─ cookie-parser@1.3.5
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/expressjs/cookie-parser
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\cookie-parser\LICENSE
-├─ cookie-signature@1.0.6
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/visionmedia/node-cookie-signature
-├─ cookie@0.1.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/cookie
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\cookie\LICENSE
-├─ cookie@0.1.5
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/cookie
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\express\node_modules\cookie\LICENSE
-├─ cookie@0.2.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/cookie
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\express-session\node_modules\cookie\LICENSE
-├─ core-util-is@1.0.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/isaacs/core-util-is
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\core-util-is\LICENSE
-├─ crc@3.4.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/alexgorbatchev/node-crc
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\crc\LICENSE
-├─ cryptiles@2.0.5
-│  ├─ licenses: BSD-3-Clause
-│  ├─ repository: https://github.com/hapijs/cryptiles
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\cryptiles\LICENSE
-├─ csrf@3.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/pillarjs/csrf
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\csrf\LICENSE
-├─ css-parse@1.0.4
-│  └─ licenses: MIT
-│  ├─ repository: https://github.com/reworkcss/css-parse
-├─ css-stringify@1.0.5
-│  └─ licenses: MIT
-│  ├─ repository: https://github.com/reworkcss/css-stringify
-├─ css@1.0.8
-│  └─ licenses: MIT
-│  ├─ repository: https://github.com/reworkcss/css
-├─ csurf@1.8.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/expressjs/csurf
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\csurf\LICENSE
-├─ dashdash@1.13.0
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/trentm/node-dashdash
-├─ dashify@0.2.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jonschlinkert/dashify
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\dashify\LICENSE
-├─ debug@2.2.0
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/visionmedia/debug
-├─ decamelize@1.1.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/sindresorhus/decamelize
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\decamelize\license
-├─ delayed-stream@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/felixge/node-delayed-stream
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\delayed-stream\License
-├─ depd@1.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/dougwilson/nodejs-depd
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\depd\LICENSE
-├─ depd@1.1.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/dougwilson/nodejs-depd
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\express\node_modules\depd\LICENSE
-├─ destroy@1.0.4
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/stream-utils/destroy
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\destroy\LICENSE
-├─ dns-prefetch-control@0.1.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/helmetjs/dns-prefetch-control
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\dns-prefetch-control\LICENSE
-├─ dont-sniff-mimetype@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/helmetjs/dont-sniff-mimetype
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\dont-sniff-mimetype\LICENSE
-├─ ecc-jsbn@0.1.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/quartzjer/ecc-jsbn
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\ecc-jsbn\LICENSE
-├─ ee-first@1.1.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jonathanong/ee-first
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\ee-first\LICENSE
-├─ escape-html@1.0.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/component/escape-html
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\escape-html\LICENSE
-├─ escape-string-regexp@1.0.5
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/sindresorhus/escape-string-regexp
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\escape-string-regexp\license
-├─ etag@1.7.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/etag
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\etag\LICENSE
-├─ express-session@1.13.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/expressjs/session
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\express-session\LICENSE
-├─ express@4.13.4
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/expressjs/express
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\express\LICENSE
-├─ extend@3.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/justmoon/node-extend
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\extend\LICENSE
-├─ extsprintf@1.0.2
-│  ├─ licenses: MIT*
-│  ├─ repository: https://github.com/davepacheco/node-extsprintf
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\extsprintf\LICENSE
-├─ finalhandler@0.4.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/pillarjs/finalhandler
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\finalhandler\LICENSE
-├─ forever-agent@0.6.1
-│  ├─ licenses: Apache-2.0
-│  ├─ repository: https://github.com/mikeal/forever-agent
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\forever-agent\LICENSE
-├─ form-data@1.0.0-rc3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/form-data/form-data
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\form-data\License
-├─ forwarded@0.1.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/forwarded
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\forwarded\LICENSE
-├─ frameguard@1.1.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/helmetjs/frameguard
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\frameguard\LICENSE
-├─ fresh@0.3.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/fresh
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\fresh\LICENSE
-├─ generate-function@2.0.0
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/mafintosh/generate-function
-├─ generate-object-property@1.2.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/mafintosh/generate-object-property
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\generate-object-property\LICENSE
-├─ graceful-readlink@1.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/zhiyelee/graceful-readlink
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\graceful-readlink\LICENSE
-├─ har-validator@2.0.6
-│  ├─ licenses: ISC
-│  ├─ repository: https://github.com/ahmadnassri/har-validator
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\har-validator\LICENSE
-├─ has-ansi@2.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/sindresorhus/has-ansi
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\has-ansi\license
-├─ hawk@3.1.3
-│  ├─ licenses: BSD-3-Clause
-│  ├─ repository: https://github.com/hueniverse/hawk
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\hawk\LICENSE
-├─ helmet-csp@1.1.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/helmetjs/csp
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\helmet-csp\LICENSE
-├─ helmet@1.2.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/helmetjs/helmet
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\helmet\LICENSE
-├─ hide-powered-by@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/helmetjs/hide-powered-by
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\hide-powered-by\LICENSE
-├─ hoek@2.16.3
-│  ├─ licenses: BSD-3-Clause
-│  ├─ repository: https://github.com/hapijs/hoek
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\hoek\LICENSE
-├─ hpkp@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/helmetjs/hpkp
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\hpkp\LICENSE
-├─ hsts@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/helmetjs/hsts
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\hsts\LICENSE
-├─ http-errors@1.3.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/http-errors
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\http-errors\LICENSE
-├─ http-signature@1.1.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/joyent/node-http-signature
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\http-signature\LICENSE
-├─ iconv-lite@0.4.11
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/ashtuchkin/iconv-lite
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\iconv-lite\LICENSE
-├─ iconv-lite@0.4.13
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/ashtuchkin/iconv-lite
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\raw-body\node_modules\iconv-lite\LICENSE
-├─ ienoopen@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/helmetjs/ienoopen
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\ienoopen\LICENSE
-├─ inherits@2.0.1
-│  ├─ licenses: ISC
-│  ├─ repository: https://github.com/isaacs/inherits
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\inherits\LICENSE
-├─ ipaddr.js@1.0.5
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/whitequark/ipaddr.js
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\ipaddr.js\LICENSE
-├─ is-buffer@1.1.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/feross/is-buffer
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\is-buffer\LICENSE
-├─ is-my-json-valid@2.13.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/mafintosh/is-my-json-valid
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\is-my-json-valid\LICENSE
-├─ is-promise@1.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/then/is-promise
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\transformers\node_modules\is-promise\LICENSE
-├─ is-promise@2.1.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/then/is-promise
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\is-promise\LICENSE
-├─ is-property@1.0.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/mikolalysenko/is-property
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\is-property\LICENSE
-├─ is-typedarray@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/hughsk/is-typedarray
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\is-typedarray\LICENSE.md
-├─ isarray@0.0.1
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/juliangruber/isarray
-├─ isstream@0.1.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/rvagg/isstream
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\isstream\LICENSE.md
-├─ jade@1.11.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jadejs/jade
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\jade\LICENSE
-├─ jodid25519@1.0.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/meganz/jodid25519
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\jodid25519\LICENSE
-├─ jsbn@0.1.0
-│  ├─ licenses: BSD
-│  ├─ repository: https://github.com/andyperlitch/jsbn
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\jsbn\LICENSE
-├─ json-schema@0.2.2
-│  ├─ licenses
-│  │  ├─ 0: AFLv2.1
-│  │  └─ 1: BSD
-│  └─ repository: https://github.com/kriszyp/json-schema
-├─ json-stringify-safe@5.0.1
-│  ├─ licenses: ISC
-│  ├─ repository: https://github.com/isaacs/json-stringify-safe
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\json-stringify-safe\LICENSE
-├─ jsonpointer@2.0.0
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/janl/node-jsonpointer
-├─ jsprim@1.2.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/davepacheco/node-jsprim
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\jsprim\LICENSE
-├─ jstransformer@0.0.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jstransformers/jstransformer
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\jstransformer\LICENSE
-├─ kind-of@3.0.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jonschlinkert/kind-of
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\kind-of\LICENSE
-├─ lazy-cache@1.0.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jonschlinkert/lazy-cache
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\lazy-cache\LICENSE
-├─ localforage@1.4.0
-│  ├─ licenses: Apache-2.0
-│  ├─ repository: https://github.com/mozilla/localForage
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\localforage\LICENSE
-├─ lodash._baseeach@4.1.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/lodash/lodash
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\lodash._baseeach\LICENSE
-├─ lodash._baseiteratee@4.5.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/lodash/lodash
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\lodash._baseiteratee\LICENSE
-├─ lodash._basereduce@3.0.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/lodash/lodash
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\lodash._basereduce\LICENSE
-├─ lodash.assign@4.0.4
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/lodash/lodash
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\lodash.assign\LICENSE
-├─ lodash.isfunction@3.0.8
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/lodash/lodash
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\lodash.isfunction\LICENSE
-├─ lodash.isstring@4.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/lodash/lodash
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\lodash.isstring\LICENSE
-├─ lodash.keys@4.0.4
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/lodash/lodash
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\lodash.keys\LICENSE
-├─ lodash.reduce@4.2.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/lodash/lodash
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\lodash.reduce\LICENSE
-├─ lodash.rest@4.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/lodash/lodash
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\lodash.rest\LICENSE
-├─ lodash.some@4.2.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/lodash/lodash
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\lodash.some\LICENSE
-├─ lodash@4.5.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/lodash/lodash
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\lodash\LICENSE
-├─ longest@1.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jonschlinkert/longest
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\longest\LICENSE
-├─ lru-cache@4.0.0
-│  ├─ licenses: ISC
-│  ├─ repository: https://github.com/isaacs/node-lru-cache
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\lru-cache\LICENSE
-├─ media-typer@0.3.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/media-typer
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\media-typer\LICENSE
-├─ merge-descriptors@1.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/component/merge-descriptors
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\merge-descriptors\LICENSE
-├─ methods@1.1.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/methods
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\methods\LICENSE
-├─ mime-db@1.22.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/mime-db
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\mime-db\LICENSE
-├─ mime-types@2.1.10
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/mime-types
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\mime-types\LICENSE
-├─ mime@1.3.4
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/broofa/node-mime
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\mime\LICENSE
-├─ minimist@0.0.8
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/substack/minimist
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\minimist\LICENSE
-├─ mkdirp@0.5.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/substack/node-mkdirp
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\mkdirp\LICENSE
-├─ moment@2.11.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/moment/moment
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\moment\LICENSE
-├─ morgan@1.6.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/expressjs/morgan
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\morgan\LICENSE
-├─ ms@0.7.1
-│  ├─ licenses: MIT*
-│  ├─ repository: https://github.com/guille/ms.js
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\ms\LICENSE
-├─ nedb@1.8.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/louischatriot/nedb
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\nedb\LICENSE
-├─ negotiator@0.5.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/negotiator
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\negotiator\LICENSE
-├─ nocache@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/helmetjs/nocache
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\nocache\LICENSE
-├─ node-uuid@1.4.7
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/broofa/node-uuid
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\node-uuid\LICENSE.md
-├─ oauth-sign@0.8.1
-│  ├─ licenses: Apache-2.0
-│  ├─ repository: https://github.com/mikeal/oauth-sign
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\oauth-sign\LICENSE
-├─ on-finished@2.3.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/on-finished
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\on-finished\LICENSE
-├─ on-headers@1.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/on-headers
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\on-headers\LICENSE
-├─ optimist@0.3.7
-│  ├─ licenses: MIT/X11
-│  ├─ repository: https://github.com/substack/node-optimist
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\optimist\LICENSE
-├─ options@0.0.6
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/einaros/options.js
-├─ parseurl@1.3.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/pillarjs/parseurl
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\parseurl\LICENSE
-├─ passport-local@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jaredhanson/passport-local
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\passport-local\LICENSE
-├─ passport-strategy@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jaredhanson/passport-strategy
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\passport-strategy\LICENSE
-├─ passport@0.3.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jaredhanson/passport
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\passport\LICENSE
-├─ path-to-regexp@0.1.7
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/component/path-to-regexp
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\path-to-regexp\LICENSE
-├─ pause@0.0.1
-│  └─ licenses: MIT
-│  ├─ repository: https://github.com/stream-utils/pause
-├─ pinkie-promise@2.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/floatdrop/pinkie-promise
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\pinkie-promise\license
-├─ pinkie@2.0.4
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/floatdrop/pinkie
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\pinkie\license
-├─ platform@1.3.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/bestiejs/platform.js
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\platform\LICENSE
-├─ process-nextick-args@1.0.6
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/calvinmetcalf/process-nextick-args
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\process-nextick-args\license.md
-├─ promise@2.0.0
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/then/promise
-├─ promise@5.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/then/promise
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\localforage\node_modules\promise\LICENSE
-├─ promise@6.1.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/then/promise
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\promise\LICENSE
-├─ proxy-addr@1.0.10
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/proxy-addr
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\proxy-addr\LICENSE
-├─ pseudomap@1.0.2
-│  ├─ licenses: ISC
-│  ├─ repository: https://github.com/isaacs/pseudomap
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\pseudomap\LICENSE
-├─ qs@4.0.0
-│  ├─ licenses: BSD-3-Clause
-│  ├─ repository: https://github.com/hapijs/qs
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\qs\LICENSE
-├─ qs@6.0.2
-│  ├─ licenses: BSD-3-Clause
-│  ├─ repository: https://github.com/ljharb/qs
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\request\node_modules\qs\LICENSE
-├─ random-bytes@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/crypto-utils/random-bytes
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\random-bytes\LICENSE
-├─ range-parser@1.0.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/range-parser
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\range-parser\LICENSE
-├─ raw-body@2.1.5
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/stream-utils/raw-body
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\raw-body\LICENSE
-├─ readable-stream@2.0.5
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/nodejs/readable-stream
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\readable-stream\LICENSE
-├─ repeat-string@1.5.4
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jonschlinkert/repeat-string
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\repeat-string\LICENSE
-├─ request@2.69.0
-│  ├─ licenses: Apache-2.0
-│  ├─ repository: https://github.com/request/request
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\request\LICENSE
-├─ right-align@0.1.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jonschlinkert/right-align
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\right-align\LICENSE
-├─ rndm@1.2.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/crypto-utils/rndm
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\rndm\LICENSE
-├─ scmp@1.0.0
-│  ├─ licenses: BSD
-│  ├─ repository: https://github.com/freewil/scmp
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\scmp\LICENSE
-├─ send@0.13.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/pillarjs/send
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\send\LICENSE
-├─ serve-favicon@2.3.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/expressjs/serve-favicon
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\serve-favicon\LICENSE
-├─ serve-static@1.10.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/expressjs/serve-static
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\serve-static\LICENSE
-├─ sntp@1.0.9
-│  ├─ licenses: BSD
-│  ├─ repository: https://github.com/hueniverse/sntp
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\sntp\LICENSE
-├─ source-map@0.1.43
-│  ├─ licenses: BSD
-│  ├─ repository: https://github.com/mozilla/source-map
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\transformers\node_modules\source-map\LICENSE
-├─ source-map@0.4.4
-│  ├─ licenses: BSD-3-Clause
-│  └─ repository: https://github.com/mozilla/source-map
-├─ source-map@0.5.3
-│  ├─ licenses: BSD-3-Clause
-│  └─ repository: https://github.com/mozilla/source-map
-├─ sshpk@1.7.4
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/arekinath/node-sshpk
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\sshpk\LICENSE
-├─ statuses@1.2.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/statuses
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\statuses\LICENSE
-├─ string_decoder@0.10.31
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/rvagg/string_decoder
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\string_decoder\LICENSE
-├─ stringstream@0.0.5
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/mhart/StringStream
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\stringstream\LICENSE.txt
-├─ strip-ansi@3.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/chalk/strip-ansi
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\strip-ansi\license
-├─ supports-color@2.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/chalk/supports-color
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\supports-color\license
-├─ swiftid@0.0.0
-│  └─ licenses: Apache-2.0
-├─ tough-cookie@2.2.1
-│  ├─ licenses: BSD-3-Clause
-│  ├─ repository: https://github.com/SalesforceEng/tough-cookie
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\tough-cookie\LICENSE
-├─ transformers@2.1.0
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/ForbesLindesay/transformers
-├─ tunnel-agent@0.4.2
-│  ├─ licenses: Apache-2.0
-│  ├─ repository: https://github.com/mikeal/tunnel-agent
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\tunnel-agent\LICENSE
-├─ tweetnacl@0.14.1
-│  ├─ licenses: SEE LICENSE IN COPYING.txt
-│  └─ repository: https://github.com/dchest/tweetnacl-js
-├─ type-is@1.6.12
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/type-is
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\type-is\LICENSE
-├─ uglify-js@2.2.5
-│  ├─ licenses: BSD-2-Clause
-│  └─ repository: https://github.com/mishoo/UglifyJS2
-├─ uglify-js@2.6.2
-│  ├─ licenses: BSD-2-Clause
-│  ├─ repository: https://github.com/mishoo/UglifyJS2
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\uglify-js\LICENSE
-├─ uglify-to-browserify@1.0.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/ForbesLindesay/uglify-to-browserify
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\uglify-to-browserify\LICENSE
-├─ uid-safe@2.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/crypto-utils/uid-safe
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\express-session\node_modules\uid-safe\LICENSE
-├─ uid-safe@2.1.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/crypto-utils/uid-safe
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\uid-safe\LICENSE
-├─ ultron@1.0.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/unshiftio/ultron
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\ultron\LICENSE
-├─ underscore@1.4.4
-│  ├─ licenses: MIT*
-│  ├─ repository: https://github.com/documentcloud/underscore
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\underscore\LICENSE
-├─ unpipe@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/stream-utils/unpipe
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\unpipe\LICENSE
-├─ util-deprecate@1.0.2
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/TooTallNate/util-deprecate
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\util-deprecate\LICENSE
-├─ utils-merge@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jaredhanson/utils-merge
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\utils-merge\LICENSE
-├─ vary@1.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/vary
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\vary\LICENSE
-├─ verror@1.3.6
-│  ├─ licenses: MIT*
-│  ├─ repository: https://github.com/davepacheco/node-verror
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\verror\LICENSE
-├─ void-elements@2.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/hemanth/void-elements
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\void-elements\LICENSE
-├─ window-size@0.1.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jonschlinkert/window-size
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\window-size\LICENSE-MIT
-├─ with@4.0.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/ForbesLindesay/with
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\with\LICENSE
-├─ wordwrap@0.0.2
-│  ├─ licenses: MIT/X11
-│  └─ repository: https://github.com/substack/node-wordwrap
-├─ wordwrap@0.0.3
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/substack/node-wordwrap
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\wordwrap\LICENSE
-├─ ws@1.0.1
-│  ├─ licenses: MIT
-│  └─ repository: https://github.com/websockets/ws
-├─ x-xss-protection@1.0.0
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/helmetjs/x-xss-protection
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\x-xss-protection\LICENSE
-├─ xtend@4.0.1
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/Raynos/xtend
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\xtend\LICENCE
-├─ yallist@2.0.0
-│  ├─ licenses: ISC
-│  ├─ repository: https://github.com/isaacs/yallist
-│  └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\yallist\LICENSE
-└─ yargs@3.10.0
-   ├─ licenses: MIT
-   ├─ repository: https://github.com/bcoe/yargs
-   └─ licenseFile: C:\Users\Brian\code\clients\SwiftID-API-reference-app\swiftid\node_modules\yargs\LICENSE
+accepts@1.2.13
+    licenses: MIT
+    repository: https://github.com/jshttp/accepts
+acorn-globals@1.0.9
+    licenses: MIT
+    repository: https://github.com/ForbesLindesay/acorn-globals
+acorn@1.2.2
+    licenses: MIT
+    repository: https://github.com/marijnh/acorn
+acorn@2.7.0
+    licenses: MIT
+    repository: https://github.com/ternjs/acorn
+align-text@0.1.4
+    licenses: MIT
+    repository: https://github.com/jonschlinkert/align-text
+amdefine@1.0.0
+    licenses: BSD-3-Clause AND MIT
+    repository: https://github.com/jrburke/amdefine
+ansi-regex@2.0.0
+    licenses: MIT
+    repository: https://github.com/sindresorhus/ansi-regex
+ansi-styles@2.2.0
+    licenses: MIT
+    repository: https://github.com/chalk/ansi-styles
+array-flatten@1.1.1
+    licenses: MIT
+    repository: https://github.com/blakeembrey/array-flatten
+asap@1.0.0
+    licenses: MIT
+asn1@0.2.3
+    licenses: MIT
+    repository: https://github.com/mcavage/node-asn1
+assert-plus@0.2.0
+    licenses: MIT
+    repository: https://github.com/mcavage/node-assert-plus
+assert-plus@1.0.0
+    licenses: MIT
+    repository: https://github.com/mcavage/node-assert-plus
+async@0.2.10
+    licenses: MIT
+    repository: https://github.com/caolan/async
+async@1.5.2
+    licenses: MIT
+    repository: https://github.com/caolan/async
+aws-sign2@0.6.0
+    licenses: Apache-2.0
+    repository: https://github.com/mikeal/aws-sign
+aws4@1.3.1
+    licenses: MIT
+    repository: https://github.com/mhart/aws4
+base64-url@1.2.1
+    licenses: ISC
+    repository: https://github.com/joaquimserafim/base64-url
+basic-auth@1.0.3
+    licenses: MIT
+    repository: https://github.com/jshttp/basic-auth
+binary-search-tree@0.2.5
+    licenses: MIT
+    repository: https://github.com/louischatriot/node-binary-search-tree
+bl@1.0.3
+    licenses: MIT
+    repository: https://github.com/rvagg/bl
+body-parser@1.13.3
+    licenses: MIT
+    repository: https://github.com/expressjs/body-parser
+boom@2.10.1
+    licenses: BSD-3-Clause
+    repository: https://github.com/hapijs/boom
+bytes@2.1.0
+    licenses: MIT
+    repository: https://github.com/visionmedia/bytes.js
+bytes@2.2.0
+    licenses: MIT
+    repository: https://github.com/visionmedia/bytes.js
+camelcase@1.2.1
+    licenses: MIT
+    repository: https://github.com/sindresorhus/camelcase
+camelize@1.0.0
+    licenses: MIT
+    repository: https://github.com/substack/camelize
+caseless@0.11.0
+    licenses: Apache-2.0
+    repository: https://github.com/mikeal/caseless
+center-align@0.1.3
+    licenses: MIT
+    repository: https://github.com/jonschlinkert/center-align
+chalk@1.1.1
+    licenses: MIT
+    repository: https://github.com/chalk/chalk
+character-parser@1.2.1
+    licenses: MIT
+    repository: https://github.com/ForbesLindesay/character-parser
+clean-css@3.4.10
+    licenses: MIT
+    repository: https://github.com/jakubpawlowicz/clean-css
+cliui@2.1.0
+    licenses: ISC
+    repository: https://github.com/bcoe/cliui
+color-convert@1.0.0
+    licenses: MIT
+    repository: https://github.com/qix-/color-convert
+combined-stream@1.0.5
+    licenses: MIT
+    repository: https://github.com/felixge/node-combined-stream
+commander@2.6.0
+    licenses: MIT
+    repository: https://github.com/tj/commander.js
+commander@2.8.1
+    licenses: MIT
+    repository: https://github.com/tj/commander.js
+commander@2.9.0
+    licenses: MIT
+    repository: https://github.com/tj/commander.js
+connect-flash@0.1.1
+    licenses: MIT
+    repository: https://github.com/jaredhanson/connect-flash
+connect@3.4.1
+    licenses: MIT
+    repository: https://github.com/senchalabs/connect
+constantinople@3.0.2
+    licenses: MIT
+    repository: https://github.com/ForbesLindesay/constantinople
+content-disposition@0.5.1
+    licenses: MIT
+    repository: https://github.com/jshttp/content-disposition
+content-security-policy-builder@1.0.0
+    licenses: MIT
+    repository: https://github.com/helmetjs/content-security-policy-builder
+content-type@1.0.1
+    licenses: MIT
+    repository: https://github.com/jshttp/content-type
+cookie-parser@1.3.5
+    licenses: MIT
+    repository: https://github.com/expressjs/cookie-parser
+cookie-signature@1.0.6
+    licenses: MIT
+    repository: https://github.com/visionmedia/node-cookie-signature
+cookie@0.1.3
+    licenses: MIT
+    repository: https://github.com/jshttp/cookie
+cookie@0.1.5
+    licenses: MIT
+    repository: https://github.com/jshttp/cookie
+cookie@0.2.3
+    licenses: MIT
+    repository: https://github.com/jshttp/cookie
+core-util-is@1.0.2
+    licenses: MIT
+    repository: https://github.com/isaacs/core-util-is
+crc@3.4.0
+    licenses: MIT
+    repository: https://github.com/alexgorbatchev/node-crc
+cryptiles@2.0.5
+    licenses: BSD-3-Clause
+    repository: https://github.com/hapijs/cryptiles
+csrf@3.0.1
+    licenses: MIT
+    repository: https://github.com/pillarjs/csrf
+css-parse@1.0.4
+    licenses: MIT
+    repository: https://github.com/reworkcss/css-parse
+css-stringify@1.0.5
+    licenses: MIT
+    repository: https://github.com/reworkcss/css-stringify
+css@1.0.8
+    licenses: MIT
+    repository: https://github.com/reworkcss/css
+csurf@1.8.3
+    licenses: MIT
+    repository: https://github.com/expressjs/csurf
+dashdash@1.13.0
+    licenses: MIT
+    repository: https://github.com/trentm/node-dashdash
+dashify@0.2.1
+    licenses: MIT
+    repository: https://github.com/jonschlinkert/dashify
+debug@2.2.0
+    licenses: MIT
+    repository: https://github.com/visionmedia/debug
+decamelize@1.1.2
+    licenses: MIT
+    repository: https://github.com/sindresorhus/decamelize
+delayed-stream@1.0.0
+    licenses: MIT
+    repository: https://github.com/felixge/node-delayed-stream
+depd@1.0.1
+    licenses: MIT
+    repository: https://github.com/dougwilson/nodejs-depd
+depd@1.1.0
+    licenses: MIT
+    repository: https://github.com/dougwilson/nodejs-depd
+destroy@1.0.4
+    licenses: MIT
+    repository: https://github.com/stream-utils/destroy
+dns-prefetch-control@0.1.0
+    licenses: MIT
+    repository: https://github.com/helmetjs/dns-prefetch-control
+dont-sniff-mimetype@1.0.0
+    licenses: MIT
+    repository: https://github.com/helmetjs/dont-sniff-mimetype
+ecc-jsbn@0.1.1
+    licenses: MIT
+    repository: https://github.com/quartzjer/ecc-jsbn
+ee-first@1.1.1
+    licenses: MIT
+    repository: https://github.com/jonathanong/ee-first
+escape-html@1.0.3
+    licenses: MIT
+    repository: https://github.com/component/escape-html
+escape-string-regexp@1.0.5
+    licenses: MIT
+    repository: https://github.com/sindresorhus/escape-string-regexp
+etag@1.7.0
+    licenses: MIT
+    repository: https://github.com/jshttp/etag
+express-session@1.13.0
+    licenses: MIT
+    repository: https://github.com/expressjs/session
+express@4.13.4
+    licenses: MIT
+    repository: https://github.com/expressjs/express
+extend@3.0.0
+    licenses: MIT
+    repository: https://github.com/justmoon/node-extend
+extsprintf@1.0.2
+    licenses: MIT*
+    repository: https://github.com/davepacheco/node-extsprintf
+finalhandler@0.4.1
+    licenses: MIT
+    repository: https://github.com/pillarjs/finalhandler
+forever-agent@0.6.1
+    licenses: Apache-2.0
+    repository: https://github.com/mikeal/forever-agent
+form-data@1.0.0-rc3
+    licenses: MIT
+    repository: https://github.com/form-data/form-data
+forwarded@0.1.0
+    licenses: MIT
+    repository: https://github.com/jshttp/forwarded
+frameguard@1.1.0
+    licenses: MIT
+    repository: https://github.com/helmetjs/frameguard
+fresh@0.3.0
+    licenses: MIT
+    repository: https://github.com/jshttp/fresh
+generate-function@2.0.0
+    licenses: MIT
+    repository: https://github.com/mafintosh/generate-function
+generate-object-property@1.2.0
+    licenses: MIT
+    repository: https://github.com/mafintosh/generate-object-property
+graceful-readlink@1.0.1
+    licenses: MIT
+    repository: https://github.com/zhiyelee/graceful-readlink
+har-validator@2.0.6
+    licenses: ISC
+    repository: https://github.com/ahmadnassri/har-validator
+has-ansi@2.0.0
+    licenses: MIT
+    repository: https://github.com/sindresorhus/has-ansi
+hawk@3.1.3
+    licenses: BSD-3-Clause
+    repository: https://github.com/hueniverse/hawk
+helmet-csp@1.1.0
+    licenses: MIT
+    repository: https://github.com/helmetjs/csp
+helmet@1.2.0
+    licenses: MIT
+    repository: https://github.com/helmetjs/helmet
+hide-powered-by@1.0.0
+    licenses: MIT
+    repository: https://github.com/helmetjs/hide-powered-by
+hoek@2.16.3
+    licenses: BSD-3-Clause
+    repository: https://github.com/hapijs/hoek
+hpkp@1.0.0
+    licenses: MIT
+    repository: https://github.com/helmetjs/hpkp
+hsts@1.0.0
+    licenses: MIT
+    repository: https://github.com/helmetjs/hsts
+http-errors@1.3.1
+    licenses: MIT
+    repository: https://github.com/jshttp/http-errors
+http-signature@1.1.1
+    licenses: MIT
+    repository: https://github.com/joyent/node-http-signature
+iconv-lite@0.4.11
+    licenses: MIT
+    repository: https://github.com/ashtuchkin/iconv-lite
+iconv-lite@0.4.13
+    licenses: MIT
+    repository: https://github.com/ashtuchkin/iconv-lite
+ienoopen@1.0.0
+    licenses: MIT
+    repository: https://github.com/helmetjs/ienoopen
+inherits@2.0.1
+    licenses: ISC
+    repository: https://github.com/isaacs/inherits
+ipaddr.js@1.0.5
+    licenses: MIT
+    repository: https://github.com/whitequark/ipaddr.js
+is-buffer@1.1.2
+    licenses: MIT
+    repository: https://github.com/feross/is-buffer
+is-my-json-valid@2.13.1
+    licenses: MIT
+    repository: https://github.com/mafintosh/is-my-json-valid
+is-promise@1.0.1
+    licenses: MIT
+    repository: https://github.com/then/is-promise
+is-promise@2.1.0
+    licenses: MIT
+    repository: https://github.com/then/is-promise
+is-property@1.0.2
+    licenses: MIT
+    repository: https://github.com/mikolalysenko/is-property
+is-typedarray@1.0.0
+    licenses: MIT
+    repository: https://github.com/hughsk/is-typedarray
+isarray@0.0.1
+    licenses: MIT
+    repository: https://github.com/juliangruber/isarray
+isstream@0.1.2
+    licenses: MIT
+    repository: https://github.com/rvagg/isstream
+jade@1.11.0
+    licenses: MIT
+    repository: https://github.com/jadejs/jade
+jodid25519@1.0.2
+    licenses: MIT
+    repository: https://github.com/meganz/jodid25519
+jsbn@0.1.0
+    licenses: BSD
+    repository: https://github.com/andyperlitch/jsbn
+json-schema@0.2.2
+    licenses
+│      0: AFLv2.1
+│      1: BSD
+    repository: https://github.com/kriszyp/json-schema
+json-stringify-safe@5.0.1
+    licenses: ISC
+    repository: https://github.com/isaacs/json-stringify-safe
+jsonpointer@2.0.0
+    licenses: MIT
+    repository: https://github.com/janl/node-jsonpointer
+jsprim@1.2.2
+    licenses: MIT
+    repository: https://github.com/davepacheco/node-jsprim
+jstransformer@0.0.2
+    licenses: MIT
+    repository: https://github.com/jstransformers/jstransformer
+kind-of@3.0.2
+    licenses: MIT
+    repository: https://github.com/jonschlinkert/kind-of
+lazy-cache@1.0.3
+    licenses: MIT
+    repository: https://github.com/jonschlinkert/lazy-cache
+localforage@1.4.0
+    licenses: Apache-2.0
+    repository: https://github.com/mozilla/localForage
+lodash._baseeach@4.1.0
+    licenses: MIT
+    repository: https://github.com/lodash/lodash
+lodash._baseiteratee@4.5.1
+    licenses: MIT
+    repository: https://github.com/lodash/lodash
+lodash._basereduce@3.0.2
+    licenses: MIT
+    repository: https://github.com/lodash/lodash
+lodash.assign@4.0.4
+    licenses: MIT
+    repository: https://github.com/lodash/lodash
+lodash.isfunction@3.0.8
+    licenses: MIT
+    repository: https://github.com/lodash/lodash
+lodash.isstring@4.0.1
+    licenses: MIT
+    repository: https://github.com/lodash/lodash
+lodash.keys@4.0.4
+    licenses: MIT
+    repository: https://github.com/lodash/lodash
+lodash.reduce@4.2.0
+    licenses: MIT
+    repository: https://github.com/lodash/lodash
+lodash.rest@4.0.1
+    licenses: MIT
+    repository: https://github.com/lodash/lodash
+lodash.some@4.2.0
+    licenses: MIT
+    repository: https://github.com/lodash/lodash
+lodash@4.5.1
+    licenses: MIT
+    repository: https://github.com/lodash/lodash
+longest@1.0.1
+    licenses: MIT
+    repository: https://github.com/jonschlinkert/longest
+lru-cache@4.0.0
+    licenses: ISC
+    repository: https://github.com/isaacs/node-lru-cache
+media-typer@0.3.0
+    licenses: MIT
+    repository: https://github.com/jshttp/media-typer
+merge-descriptors@1.0.1
+    licenses: MIT
+    repository: https://github.com/component/merge-descriptors
+methods@1.1.2
+    licenses: MIT
+    repository: https://github.com/jshttp/methods
+mime-db@1.22.0
+    licenses: MIT
+    repository: https://github.com/jshttp/mime-db
+mime-types@2.1.10
+    licenses: MIT
+    repository: https://github.com/jshttp/mime-types
+mime@1.3.4
+    licenses: MIT
+    repository: https://github.com/broofa/node-mime
+minimist@0.0.8
+    licenses: MIT
+    repository: https://github.com/substack/minimist
+mkdirp@0.5.1
+    licenses: MIT
+    repository: https://github.com/substack/node-mkdirp
+moment@2.11.2
+    licenses: MIT
+    repository: https://github.com/moment/moment
+morgan@1.6.1
+    licenses: MIT
+    repository: https://github.com/expressjs/morgan
+ms@0.7.1
+    licenses: MIT*
+    repository: https://github.com/guille/ms.js
+nedb@1.8.0
+    licenses: MIT
+    repository: https://github.com/louischatriot/nedb
+negotiator@0.5.3
+    licenses: MIT
+    repository: https://github.com/jshttp/negotiator
+nocache@1.0.0
+    licenses: MIT
+    repository: https://github.com/helmetjs/nocache
+node-uuid@1.4.7
+    licenses: MIT
+    repository: https://github.com/broofa/node-uuid
+oauth-sign@0.8.1
+    licenses: Apache-2.0
+    repository: https://github.com/mikeal/oauth-sign
+on-finished@2.3.0
+    licenses: MIT
+    repository: https://github.com/jshttp/on-finished
+on-headers@1.0.1
+    licenses: MIT
+    repository: https://github.com/jshttp/on-headers
+optimist@0.3.7
+    licenses: MIT/X11
+    repository: https://github.com/substack/node-optimist
+options@0.0.6
+    licenses: MIT
+    repository: https://github.com/einaros/options.js
+parseurl@1.3.1
+    licenses: MIT
+    repository: https://github.com/pillarjs/parseurl
+passport-local@1.0.0
+    licenses: MIT
+    repository: https://github.com/jaredhanson/passport-local
+passport-strategy@1.0.0
+    licenses: MIT
+    repository: https://github.com/jaredhanson/passport-strategy
+passport@0.3.2
+    licenses: MIT
+    repository: https://github.com/jaredhanson/passport
+path-to-regexp@0.1.7
+    licenses: MIT
+    repository: https://github.com/component/path-to-regexp
+pause@0.0.1
+    licenses: MIT
+    repository: https://github.com/stream-utils/pause
+pinkie-promise@2.0.0
+    licenses: MIT
+    repository: https://github.com/floatdrop/pinkie-promise
+pinkie@2.0.4
+    licenses: MIT
+    repository: https://github.com/floatdrop/pinkie
+platform@1.3.1
+    licenses: MIT
+    repository: https://github.com/bestiejs/platform.js
+process-nextick-args@1.0.6
+    licenses: MIT
+    repository: https://github.com/calvinmetcalf/process-nextick-args
+promise@2.0.0
+    licenses: MIT
+    repository: https://github.com/then/promise
+promise@5.0.0
+    licenses: MIT
+    repository: https://github.com/then/promise
+promise@6.1.0
+    licenses: MIT
+    repository: https://github.com/then/promise
+proxy-addr@1.0.10
+    licenses: MIT
+    repository: https://github.com/jshttp/proxy-addr
+pseudomap@1.0.2
+    licenses: ISC
+    repository: https://github.com/isaacs/pseudomap
+qs@4.0.0
+    licenses: BSD-3-Clause
+    repository: https://github.com/hapijs/qs
+qs@6.0.2
+    licenses: BSD-3-Clause
+    repository: https://github.com/ljharb/qs
+random-bytes@1.0.0
+    licenses: MIT
+    repository: https://github.com/crypto-utils/random-bytes
+range-parser@1.0.3
+    licenses: MIT
+    repository: https://github.com/jshttp/range-parser
+raw-body@2.1.5
+    licenses: MIT
+    repository: https://github.com/stream-utils/raw-body
+readable-stream@2.0.5
+    licenses: MIT
+    repository: https://github.com/nodejs/readable-stream
+repeat-string@1.5.4
+    licenses: MIT
+    repository: https://github.com/jonschlinkert/repeat-string
+request@2.69.0
+    licenses: Apache-2.0
+    repository: https://github.com/request/request
+right-align@0.1.3
+    licenses: MIT
+    repository: https://github.com/jonschlinkert/right-align
+rndm@1.2.0
+    licenses: MIT
+    repository: https://github.com/crypto-utils/rndm
+scmp@1.0.0
+    licenses: BSD
+    repository: https://github.com/freewil/scmp
+send@0.13.1
+    licenses: MIT
+    repository: https://github.com/pillarjs/send
+serve-favicon@2.3.0
+    licenses: MIT
+    repository: https://github.com/expressjs/serve-favicon
+serve-static@1.10.2
+    licenses: MIT
+    repository: https://github.com/expressjs/serve-static
+sntp@1.0.9
+    licenses: BSD
+    repository: https://github.com/hueniverse/sntp
+source-map@0.1.43
+    licenses: BSD
+    repository: https://github.com/mozilla/source-map
+source-map@0.4.4
+    licenses: BSD-3-Clause
+    repository: https://github.com/mozilla/source-map
+source-map@0.5.3
+    licenses: BSD-3-Clause
+    repository: https://github.com/mozilla/source-map
+sshpk@1.7.4
+    licenses: MIT
+    repository: https://github.com/arekinath/node-sshpk
+statuses@1.2.1
+    licenses: MIT
+    repository: https://github.com/jshttp/statuses
+string_decoder@0.10.31
+    licenses: MIT
+    repository: https://github.com/rvagg/string_decoder
+stringstream@0.0.5
+    licenses: MIT
+    repository: https://github.com/mhart/StringStream
+strip-ansi@3.0.1
+    licenses: MIT
+    repository: https://github.com/chalk/strip-ansi
+supports-color@2.0.0
+    licenses: MIT
+    repository: https://github.com/chalk/supports-color
+swiftid@0.0.0
+    licenses: Apache-2.0
+tough-cookie@2.2.1
+    licenses: BSD-3-Clause
+    repository: https://github.com/SalesforceEng/tough-cookie
+transformers@2.1.0
+    licenses: MIT
+    repository: https://github.com/ForbesLindesay/transformers
+tunnel-agent@0.4.2
+    licenses: Apache-2.0
+    repository: https://github.com/mikeal/tunnel-agent
+tweetnacl@0.14.1
+    licenses: SEE LICENSE IN COPYING.txt
+    repository: https://github.com/dchest/tweetnacl-js
+type-is@1.6.12
+    licenses: MIT
+    repository: https://github.com/jshttp/type-is
+uglify-js@2.2.5
+    licenses: BSD-2-Clause
+    repository: https://github.com/mishoo/UglifyJS2
+uglify-js@2.6.2
+    licenses: BSD-2-Clause
+    repository: https://github.com/mishoo/UglifyJS2
+uglify-to-browserify@1.0.2
+    licenses: MIT
+    repository: https://github.com/ForbesLindesay/uglify-to-browserify
+uid-safe@2.0.0
+    licenses: MIT
+    repository: https://github.com/crypto-utils/uid-safe
+uid-safe@2.1.0
+    licenses: MIT
+    repository: https://github.com/crypto-utils/uid-safe
+ultron@1.0.2
+    licenses: MIT
+    repository: https://github.com/unshiftio/ultron
+underscore@1.4.4
+    licenses: MIT*
+    repository: https://github.com/documentcloud/underscore
+unpipe@1.0.0
+    licenses: MIT
+    repository: https://github.com/stream-utils/unpipe
+util-deprecate@1.0.2
+    licenses: MIT
+    repository: https://github.com/TooTallNate/util-deprecate
+utils-merge@1.0.0
+    licenses: MIT
+    repository: https://github.com/jaredhanson/utils-merge
+vary@1.0.1
+    licenses: MIT
+    repository: https://github.com/jshttp/vary
+verror@1.3.6
+    licenses: MIT*
+    repository: https://github.com/davepacheco/node-verror
+void-elements@2.0.1
+    licenses: MIT
+    repository: https://github.com/hemanth/void-elements
+window-size@0.1.0
+    licenses: MIT
+    repository: https://github.com/jonschlinkert/window-size
+with@4.0.3
+    licenses: MIT
+    repository: https://github.com/ForbesLindesay/with
+wordwrap@0.0.2
+    licenses: MIT/X11
+    repository: https://github.com/substack/node-wordwrap
+wordwrap@0.0.3
+    licenses: MIT
+    repository: https://github.com/substack/node-wordwrap
+ws@1.0.1
+    licenses: MIT
+    repository: https://github.com/websockets/ws
+x-xss-protection@1.0.0
+    licenses: MIT
+    repository: https://github.com/helmetjs/x-xss-protection
+xtend@4.0.1
+    licenses: MIT
+    repository: https://github.com/Raynos/xtend
+yallist@2.0.0
+    licenses: ISC
+    repository: https://github.com/isaacs/yallist
+yargs@3.10.0
+    licenses: MIT
+    repository: https://github.com/bcoe/yargs
