@@ -10,20 +10,46 @@ The only dependency that must be manually installed is [Node.js](https://nodejs.
 
 You can learn how to install Node.js on your platform at https://nodejs.org/en/download/.
 
+### Decide on hosting
+In order for OAuth and webhooks to work, the app will need to be publicly accessible.  Heroku will work well (a Procfile is included in this repository), but you can set up any hosting you choose.  If you choose Heroku, take a look through the [Node tutorial](https://devcenter.heroku.com/articles/getting-started-with-nodejs) to familiarize yourself.
+
+At a minimum, the app can be hosted locally with a port opened, but if you do this be sure to update the URL in your registered webhook and the application configuration if your endpoint changes.
+
 ### Create your developer account and test app
 Sign up for a developer account at https://developer.capitalone.com/. Then, create your first app at https://developer.capitalone.com/app-registration/. After signing up, you will see your Client Id and Client Secret. You will need both of these for your config.js. Next, be sure to set your Redirect URI for OAuth. Finally, under "Connected API Products", add a product and select SwiftID.
 
-### config.js
-config.js contains information specific to your app, such as your client_id and client_secret. Create this file by copying [config.js.sample](/swiftid/config.js.sample). The sample version points to the sandbox environment at https://api-sandbox.capitalone.com/. Be careful not to put config.js into version control.
+### config.js and Environment Variables
+config.js contains information specific to your app, and uses environment variables to capture sensitive or environment-specific values.  These values are set when running the application, E.g. (split across multiple lines):
+```bash
+SWIFTID_APP_HOST='https://my.test.app' \
+SWIFTID_CLIENT_ID='abcdef' \
+SWIFTID_CLIENT_SECRET='123456' \
+SWIFTID_CRYPTO_KEY='abc123' \
+npm start
+```
+
+If you use Heroku for hosting, these configuration values can be set using the `heroku config` command.
+
+For example:
+```
+heroku config:set SWIFTID_APP_HOST=https://my.test.app
+```
+
+If you are running locally, you may want to create a convenience script which runs the above command, but be sure not to check it into version control.
 
 #### Generating an encryption key
-This app uses the crypto module to encrypt/decrypt certain sensitive values.  You can generate a new encryption key by running the script in ./bin/cryptoKey.js from your node console (`node ./bin/cryptoKey.js` from within the swiftid directory), and pasting the resulting value into the `cryptoKey` section of your config.js file.
+This app uses the crypto module to encrypt/decrypt certain sensitive values.  You can generate a new encryption key by running the script in ./bin/cryptoKey.js from your node console (`node ./bin/cryptoKey.js` from within the swiftid directory), and saving the resulting value to use as the value of the `SWIFTID_CRYPTO_KEY` environment variable.
 
 ### Start PhotoShed
+
+#### Locally
 From the project root:  
 `cd swiftid`  
 `npm install`  
 `npm start`
+
+#### On Heroku
+Push to your heroku remote and ensure all config variables have been set, then run the following from within your repository:  `heroku ps:scale web=1`
 
 ### Register a webhook with the SwiftID API
 The app must have an endpoint registered with SwiftID to use as a webhook callback when a SwiftID request is approved or rejected. These curl commands will authenticate and register the webhook. In production this endpoint must be secured with HTTPS, but the sandbox environment does not require this.

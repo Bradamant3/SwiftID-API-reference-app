@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and limitations 
 */
 var oauthHost = 'https://api-sandbox.capitalone.com'
 var swiftidHost = 'https://api-sandbox.capitalone.com'
+// This is the publicly-accessible endpoint for your app
 var appHost = process.env.SWIFTID_APP_HOST || 'http://localhost:3000'
 
 module.exports = {
