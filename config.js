@@ -30,7 +30,7 @@ module.exports = {
       // The clientId and clientSecret you received when registering your app.
       clientID: process.env.SWIFTID_CLIENT_ID,
       clientSecret: process.env.SWIFTID_CLIENT_SECRET,
-      callbackURL: appHost + '/oauth/callback',
+      redirectURI: appHost + '/oauth/callback',
       // Defines the range of time (in seconds) before the token's 'expires_in' value will cause a refresh
       // E.g. a value of 10 and an expires_in of 900 will cause a refresh after 890 seconds or more
       expirationThreshold: 60
