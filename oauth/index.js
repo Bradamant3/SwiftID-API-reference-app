@@ -41,7 +41,7 @@ module.exports = function (options) {
     var params = {
       'client_id': clientID,
       'redirect_uri': redirectURI,
-      'scope': 'openid swiftid',
+      'scope': 'swiftid',
       'response_type': 'code'
     }
     var fullUrl = url + '?' + qs.stringify(params)
