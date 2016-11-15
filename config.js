@@ -25,8 +25,8 @@ module.exports = {
       apiVersion: 1
     },
     oauth: {
-      authorizationURL: oauthHost + '/oauth/auz/authorize',
-      tokenURL: oauthHost + '/oauth/oauth20/token',
+      authorizationURL: oauthHost + '/oauth2/authorize',
+      tokenURL: oauthHost + '/oauth2/token',
       // The clientId and clientSecret you received when registering your app.
       clientID: process.env.SWIFTID_CLIENT_ID,
       clientSecret: process.env.SWIFTID_CLIENT_SECRET,
